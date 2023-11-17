@@ -5,12 +5,94 @@
     box-sizing: border-box;
 }
 .banner{
+    position: relative;
     width: 100%;
     height: 100vh;
     background-image: url(cQPnt2.jpg);
 background-size: cover;
 background-position:center;
+display: flex;
+justify-content: space-between;
+align-items: top;
+padding: 10px 7% 0;
+overflow: hidden;
+
 }
+.banner .rombi2{
+    position: absolute;
+    top: -25%;
+    right: -25%;
+    width: 700px;
+    height: 700px;
+    background:rgba(216, 207, 23, 0.741);
+    transform: rotate(120deg);
+
+}
+ .content{
+padding-top: 169px;
+
+}
+.content h1{
+font-size: 50px;
+line-height: 1.2;
+opacity: 0;
+animation: slideRight 1s ease forwards;
+animation-delay: 0.2s; 
+}
+.content h3{
+    opacity: 0;
+animation: slideRight 1s ease forwards;
+animation-delay: 0.2s; 
+}
+span{
+    color: #009688;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 28px;
+    background: rgb(94, 139, 32);
+ 
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    font-size: 16px;
+    color: #eaeaea;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 300;
+margin-left: 350px;
+margin-top: 80px;
+opacity: 0;
+animation: slideRight 1s ease forwards;
+animation-delay: 0.2s; 
+
+}
+ .shkallet{
+position: relative;
+width: 380px;
+height: 380px;
+transform: rotate(45deg);
+margin-top: 80px;
+
+}
+.shkallet .rombi{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:none;
+    border: 25px solid #009688;
+box-shadow: -15px 15px 15px;
+opacity: 0;
+animation: zoomOut 1s ease forwards;
+animation-delay:0.3s ;
+}
+.shkallet .rombi img{
+    position: absolute;
+    max-width: 750px;
+    transform: rotate(-45deg);
+    top: -70px;
+    left: -100px;
+}
+
 .navigationbar{
     width: 100%;
     height: 30px;
@@ -133,4 +215,25 @@ ul{
     color: #24262b;
     background-color: #ffffff;
     
+}
+@keyframes zoomOut{
+0%{
+    transform: scale(1.1);
+    opacity: 0;
+}
+100%{
+    transform: scale(1);
+    opacity: 1;
+}
+}
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+
+  opacity: 0;
+    }
+    100%{
+        transform: transformX(0);
+        opacity: 1;
+    }
 }
