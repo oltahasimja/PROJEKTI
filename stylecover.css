@@ -15,7 +15,7 @@ background-position:center;
 display: flex;
 justify-content: space-between;
 align-items: top;
-padding: 1% 0.7% 0;
+padding: 9px 6% 0;
 overflow: hidden;
 
 }
@@ -34,7 +34,8 @@ padding-top: 169px;
 
 }
 .content h1{
-font-size: 3vw;
+
+font-size: 50px;
 line-height: 1.2;
 opacity: 0;
 animation: slideRight 1s ease forwards;
