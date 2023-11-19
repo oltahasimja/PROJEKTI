@@ -23,8 +23,8 @@ overflow: hidden;
     position: absolute;
     top: -25%;
     right: -25%;
-    width: 20%;
-    padding-bottom: 20%;
+    width: 700px;
+    height: 700px;
     background:rgba(216, 207, 23, 0.741);
     transform: rotate(120deg);
 
