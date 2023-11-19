@@ -255,25 +255,27 @@ ul{
 .banner2{
     position: relative;
     width: 100%;
-    height: 100vh;
     background-image: url(cQPnt2.jpg);
     background-size: cover;
     background-position:center;
     display: flex;
-    justify-content: space-between;
-    align-items: top;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
     padding: 9px 6% 0;
     overflow: hidden;
 
 }
 .blloku1 {
-    margin-top: 150px;
+    margin-top: 300px;
     padding: 20px;
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center; 
     background-color: #ffffff;
     height: 290px;
-    width: 100%;
+    width: 1200px;
     border: 5px solid #009688 ;
     box-shadow: -15px 15px 15px;
   }
@@ -286,4 +288,12 @@ ul{
   .texti{
     text-align: justify;
     text-justify: inter-word;
+    
   }
+  .additional-image {
+    margin-top: 150px;
+    width: 1200px;
+    height: 360px;
+  
+  }
+ 
