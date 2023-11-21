@@ -358,9 +358,15 @@ ul{
     margin-bottom: 1em;
 
   }
+  #why{
+    margin-top: 1em;
+   align-self: center;
+   text-justify: inter-word;
+   font-size:2.5em;
+  }
 
   .historia{
-    border: 1px solid black;
+   
     width: 100%;
     height: 35em;
     display: flex;
@@ -417,3 +423,25 @@ ul{
   .dot3{
     margin-top: -3em;
   }
+  .div-3{
+    display: flex;
+    flex-direction:column;
+  }
+  .div-4{
+  margin-bottom: 4.5em;
+  margin-left: 7.5em;
+width:34em;
+line-height: 1.8em;
+  }
+.div-5{
+  margin-bottom: 4.5em;
+  margin-left: 7.5em;
+width:34em;
+line-height: 1.8em;
+}
+.div-6{
+  
+  margin-left: 7.5em;
+  width:34em;
+  line-height: 1.8em;
+}
