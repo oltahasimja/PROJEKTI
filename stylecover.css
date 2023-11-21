@@ -4,7 +4,7 @@
     font-family: sans-serif;
     box-sizing: border-box;
 }
-
+/*Home*/
 .banner{
     position: relative;
     width: 100%;
@@ -252,6 +252,7 @@ ul{
         opacity: 1;
     }
 }
+/*About Us*/
 .banner2{
     height: auto;
     position: relative;
@@ -271,8 +272,8 @@ ul{
     padding-right: 20px;
     display: flex;
     align-items: center; 
-   
-
+    flex-direction: row;
+    background-image: linear-gradient(to right,#009688,white);
     height:16.26em;
     width: 100%;
    
@@ -288,7 +289,7 @@ ul{
     
     background-image: linear-gradient(to right,rgba(216, 207, 23, 0.741),white);
 
-    height:16.26em;
+    height:19.26em;
     width: 100%;
    
   }
@@ -299,15 +300,21 @@ ul{
      object-fit: cover;
   }
   .blloku1 img{
-   
+    opacity: 0.8;
     width: 45%;
     height:100%;
-    margin-right: 20px;
+    margin-right: 0.5em;
+    
   }
   .texti{
-    width: 55%;
-    text-align: justify;
-    text-justify: inter-word;
+    margin-left: 2.3em;
+    margin-right: 2.3em;
+    width: 50.3%;
+    line-height: 1.5em;
+    text-align: center;
+  }
+  #ourvalues{
+    font-size: 2.6em;
   }
   .data{
     width: 5em;
@@ -323,6 +330,11 @@ ul{
   }
   #ourstory{
     width: 40em;
+    text-align: center;
+  }
+  #ourstorytitle{
+    font-size: 2.5em;
+    text-align: center;
   }
   .work{
     display: flex;
@@ -354,12 +366,11 @@ ul{
     padding: 5em;
     width: 33.3%;
     text-align: center;
-    /* row-gap: 1.2em; */
-  }  .tabela-3{
+  }  
+  .tabela-3{
     padding: 5em;
     width: 33.3%;
     text-align: center;
-    /* row-gap: 1.2em; */
   }
   #parag1{
     text-align: center;
@@ -368,6 +379,7 @@ ul{
 
   .tabela-1 h2,.tabela-2 h2, .tabela-3 h2{
     margin-bottom: 1em;
+    color: #009688;
 
   }
   #why{
@@ -457,3 +469,17 @@ line-height: 1.8em;
   width:34em;
   line-height: 1.8em;
 }
+
+.services{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+.services > div {
+  flex: 0 0 48%;
+  margin-bottom: 20px;
+}
+
+
