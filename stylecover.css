@@ -309,6 +309,18 @@ ul{
     text-align: justify;
     text-justify: inter-word;
   }
+  .data{
+    width: 5em;
+    height:5em;
+  }
+  .creativity{
+    width: 5em;
+    height:5em;
+  }
+  .inovacion{
+    width: 5em;
+    height:5em;
+  }
   #ourstory{
     width: 40em;
   }
