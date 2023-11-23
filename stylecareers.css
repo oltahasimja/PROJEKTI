@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;1,6..12,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;1,6..12,200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.navigationbar{
+    width: 100%;
+    height: 30px;
+    margin: auto;
+    padding: 45px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:  rgb(230, 230, 230);
+}
+.logo{
+    width: 193px;
+    height: 83px;
+    cursor: pointer;
+    margin-left:30px;
+    
+
+}
+.navigationbar ul{
+    margin-right: 50px;
+}
+.navigationbar ul li{
+    list-style: none;
+    display:inline-block ;
+    margin: 0 20px;
+position:relative;
+font-family: sans-serif;
+}
+
+.navigationbar ul li a{
+    text-decoration: none;
+    color:rgb(41, 37, 37);
+    text-transform: uppercase;
+}
+.navigationbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+left:0;
+bottom: -10px;
+transition: 0.2s;
+}
+.navigationbar ul li:hover::after{
+
+    width: 100%;
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+
+
+ul{
+    list-style: none;
+}
+.banner2{
+    height: auto;
+    position: relative;
+   
+    background-image: url(cQPnt2.jpg);
+    background-size: cover;
+    background-position:center;
+  
+
+}
+.banner2{
+    margin: 10px;
+
+}
+.banner2 .title{
+    font-size:50px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: black;
+font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+}
+.banner2 .card_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+
+}
+.card_container .card{
+    max-width: 410px;
+    border-radius: 20px;
+  background: #1e293b ;
+    border: 0.5px solid #f1f5f9 !important;
+    padding: 15px;
+    color: #f1f5f9;
+    position: relative;
+}
+.user_content{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.user_content .post{
+font-size: 15px;
+color: #6e77d3;
+margin: 15px 0;
+font-weight: 400;
+font-family: 'Nunito Sans', sans-serif;
+position: relative;
+left: 16px;
+
+}
+
+.user_content .post::before{
+    content: "";
+    height: 1px;
+    width: 15px;
+    background: #6e77d3;
+    position: absolute;
+   top: 50%;
+   left: -16px; 
+}
+.fa-solid{
+    color: #ffc107 ;
+
+}
+.transparent{
+
+    color: transparent;
+}
+.user_content .about{
+    color: #cbd5e1;
+    font-family: 'Nunito Sans', sans-serif;
+    margin-top: 10px;
+    font-size: 13px ;
+}
+.card .roundbox{
+    position: absolute;
+    top: -20%;
+    right: 10%;
+    background: #1e293b !important;
+    width: 130px;
+    height: 130px;
+    border: 1px solid #f1f5f9;
+    border-radius: 50%;
+ z-index: 333;
+}
+.card .img_box{
+    position: absolute;
+    top:-20%;
+    right: 10%;
+ z-index: 555;
+}
+.card .img_box img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    padding: 10px;
+
+}
+.card .squarebox{
+    height: 90px;
+    width: 136px;
+    background: #1e293b;
+    position: absolute;
+    top:0;
+    right: 9%;
+    z-index: 444;
+
+}
