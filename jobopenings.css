@@ -154,7 +154,14 @@ ul{
     width: 25px;
     height: auto;
 }
-
+.foto-fulltime{
+    display: flex;
+    flex-direction: row;
+}
+.time{
+    margin-left: 4px;
+    margin-top: 2px;
+}
   .row{
     display: flex;
     flex-wrap: wrap;
