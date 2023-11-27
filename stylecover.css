@@ -155,6 +155,49 @@ transition: 0.2s;
     max-width: 1170px;
     margin: auto;
 }
+@media screen and (max-width: 768px) {
+  .navigationbar {
+      flex-direction: column;
+      height: auto;
+      padding: 15px 0;
+  }
+
+  .logo {
+      margin-left: 15px;
+  }
+
+  .navigationbar ul {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+  }
+
+  .navigationbar ul li {
+      display: block;
+      margin: 10px 0;
+      position: relative;
+      font-size: 15px;
+       
+  }
+
+  .navigationbar ul li::after {
+      display: none;
+  }
+
+
+  .navigationbar {
+      padding: 10px 0;
+      background-color: rgb(230, 230, 230); 
+  }
+
+  .logo {
+      width: 120px; 
+      height: 50px; 
+  }
+}
+
 
 .row{
     display: flex;

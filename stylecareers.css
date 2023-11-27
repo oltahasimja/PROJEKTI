@@ -70,6 +70,50 @@ transition: 0.2s;
 ul{
     list-style: none;
 }
+
+@media screen and (max-width: 768px) {
+    .navigationbar {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+    }
+  
+    .logo {
+        margin-left: 15px;
+    }
+  
+    .navigationbar ul {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        display: flex;
+        justify-content: center; 
+    }
+  
+    .navigationbar ul li {
+        display: block;
+        margin: 10px 0;
+        position: relative;
+        font-size: 15px;
+         
+    }
+  
+    .navigationbar ul li::after {
+        display: none;
+    }
+  
+    .navigationbar {
+        padding: 10px 0;
+        background-color:  rgb(230, 230, 230);
+    }
+  
+    .logo {
+        width: 120px; 
+        height: 50px; 
+    }
+  }
+  
+  
 .banner2{
     height: auto;
     position: relative;
@@ -85,26 +129,32 @@ ul{
     margin-left: 20%;
     margin-right: 20%;
     font-size:50px;
-    margin-bottom: 15px;   
+    margin-bottom: 15px; 
+      
     text-align: center;
     color: black;
 font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
 }
 
 .nje{
+    
     display: flex;
     flex-direction: row;
+ width: 100%;
     align-items: center;
 }
 .dy{
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-wrap: wrap-reverse;
+    width: 100%;
 }
 .tre{
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 100%;
 }
 #nje{
    margin-bottom: 4.5em;
@@ -128,9 +178,10 @@ font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ox
 
 .nje img{
     margin-bottom: 4em;
-    border-radius: 100%;
-    margin-left: 10em;
-    width: 20em;
+    border-radius: 100% ;
+
+    margin-left: 10%;
+    width: 20%;
     height: auto;
 }
 
@@ -148,97 +199,179 @@ font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ox
     width: 20em;
     height: auto;
 }
-.banner2 .card_container{
+@media screen and (max-width: 600px) {
+    .nje, .dy, .tre {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    
+
+    #nje, #dy, #tre {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .nje img, .dy img, .tre img {
+        margin-left: 0;
+        margin-right: 0;
+        width: 70%;
+        max-width: 20em;
+        height: auto;
+    }
+}
+@media screen and (max-width: 600px) {
+    .dy {
+        flex-direction: column-reverse; 
+        text-align: center;
+    }
+
+    #dy {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 2em; 
+    }
+
+    .dy img {
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        max-width: 20em;
+        height: auto;
+    }
+}
+.banner2 .card_container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 30px;
-
-
 }
-.card_container .card{
+
+.card_container .card {
     margin-top: 10%;
     max-width: 410px;
     border-radius: 20px;
-  background: #1e293b ;
+    background: rgb(149, 115, 41);
     border: 0.5px solid #f1f5f9 !important;
     padding: 15px;
-    color: #f1f5f9;
     position: relative;
+    
+    color: #e9ecef;
 }
-.user_content{
+
+
+
+.user_content {
     font-size: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.user_content .post{
-font-size: 15px;
-color: #6e77d3;
-margin: 15px 0;
-font-weight: 400;
-font-family: 'Nunito Sans', sans-serif;
-position: relative;
-left: 16px;
 
+
+
+.user_content .post {
+    font-size: 15px;
+    color: #10f818;
+    margin: 15px 0;
+    font-weight: 400;
+    font-family: 'Nunito Sans', sans-serif;
+    position: relative;
+    left: 16px;
 }
 
-.user_content .post::before{
+.user_content .post::before {
     content: "";
     height: 1px;
     width: 15px;
-    background: #6e77d3;
+    background: #10f818;
     position: absolute;
-   top: 50%;
-   left: -16px; 
+    top: 50%;
+    left: -16px;
 }
-.fa-solid{
-    color: #ffc107 ;
 
+.fa-solid {
+    color: #ffc107;
 }
-.transparent{
 
+.transparent {
     color: transparent;
 }
-.user_content .about{
-    color: #cbd5e1;
+
+.user_content .about {
+    color: #e9ecef;
     font-family: 'Nunito Sans', sans-serif;
     margin-top: 10px;
-    font-size: 13px ;
+    font-size: 13px;
 }
-.card .roundbox{
+
+.user_content .about .card:hover {
+    color: #121314;
+    font-family: 'Nunito Sans', sans-serif;
+    margin-top: 10px;
+    font-size: 13px;
+    border: 0.5px solid #121314  !important;
+}
+
+.card .roundbox {
     position: absolute;
     top: -20%;
     right: 10%;
-    background: #1e293b !important;
+    background:  rgb(149, 115, 41) !important;
     width: 130px;
     height: 130px;
     border: 1px solid #f1f5f9;
     border-radius: 50%;
     z-index: 333;
 }
-.card .img_box{
+
+
+.card .img_box {
     position: absolute;
-    top:-20%;
+    top: -20%;
     right: 10%;
- z-index: 555;
+    z-index: 555;
 }
-.card .img_box img{
+
+
+.card .img_box img {
     width: 130px;
     height: 130px;
     border-radius: 50%;
     padding: 10px;
-
 }
-.card .squarebox{
+
+.card .squarebox {
     height: 90px;
     width: 136px;
-    background: #1e293b;
+    background: rgb(149, 115, 41);
     position: absolute;
-    top:0;
+    top: 0;
     right: 9%;
     z-index: 444;
-
 }
+
+
+.card_container .card:hover .about {
+    color: #121314; 
+   
+}
+.card_container .card:hover {
+    background:rgb(201, 199, 196);
+    color: #121314;
+}
+
+.card_container .card:hover .roundbox,
+.card_container .card:hover .squarebox,
+.card_container .card:hover .img_box {
+    background: rgb(201, 199, 196);
+    border-radius: 50%; 
+    border-color: #121314;
+}
+
+
+
 
 
 .row{
