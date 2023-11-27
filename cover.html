@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <header>    <div class="navigationbar">
+    <header>    
+        <div class="navigationbar">
         <img src="logo.png" class="logo">
         <ul>
             <li><a href="#">Home</a></li>
@@ -19,21 +20,24 @@
         </ul>
     </div></header>
     <div class="banner">
-        <div class="rombi2"></div>
-        <div class="content">
-            <h1>Unlock Your Potential,<br> <span>Find Your Path to Success</span></h1>
-            <br>
-            <h3>Your success story begins here – let us guide you towards a fulfilling and rewarding career.</h3>
-            <a href="#" class="btn"><h2>Get Started</h2></a>
-        </div>
-    <div class="shkallet">
+        <div class="partition-1">
+              <div class="partition-11">
+             <div class="rombi2"></div>
+             <div class="content">
+             <h1 id="Unlock">Unlock Your Potential,<br> <span id="find">Find Your Path to Success</span></h1>
+             <br>
+             <h3>Your success story begins here – let us guide you towards a fulfilling and rewarding career.</h3>
+             <a href="#" class="btn"><h2>Get Started</h2></a>
+              </div>
+             <div class="shkallet">
   
-        <div class="rombi">
-            <img src="shkallet.png" alt="">
+              <div class="rombi">
+             <img src="shkallet.png" alt="">
+             </div>
+              </div>
+               </div>
+              </div>
         </div>
-    </div>
-
-</div>
 
     <footer class="footer">
         <div class="container">
@@ -71,5 +75,33 @@
             </div>
         </div>
     </footer>
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelector('.slides');
+        const totalSlides = document.querySelectorAll('.slide').length;
+
+        document.querySelector('.next').addEventListener('click', () => {
+            if (currentIndex < totalSlides - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            updateSlider();
+        });
+
+        document.querySelector('.prev').addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = totalSlides - 1;
+            }
+            updateSlider();
+        });
+
+        function updateSlider() {
+            const translateValue = -currentIndex * 100 + '%';
+            slides.style.transform = `translateX(${translateValue})`;
+        }
+    </script>
 </body>
 </html>

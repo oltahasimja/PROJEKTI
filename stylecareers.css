@@ -443,3 +443,15 @@ ul{
     background-color: #ffffff;
     
 }
+
+@media screen and (max-width: 768px) {
+    .footer-col {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  
+    .footer-col h4::before {
+      width: 30px;
+    }
+  }

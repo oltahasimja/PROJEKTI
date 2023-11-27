@@ -7,8 +7,8 @@
 /*Home*/
 .banner{
     position: relative;
+    height: 50em;
     width: 100%;
-    height: 100vh;
     background-image: url(cQPnt2.jpg);
 background-size: cover;
 background-position:center;
@@ -17,6 +17,13 @@ justify-content: space-between;
 align-items: top;
 padding: 9px 6% 0;
 overflow: hidden;
+
+
+
+}
+.partition-11{
+  display: flex;
+  flex-direction: row;
 
 }
 .banner .rombi2{
@@ -33,7 +40,7 @@ overflow: hidden;
 padding-top: 169px;
 
 }
-.content h1{
+.content #Unlock{
 
 font-size: 50px;
 line-height: 1.2;
@@ -46,9 +53,15 @@ animation-delay: 0.2s;
 animation: slideRight 1s ease forwards;
 animation-delay: 0.2s; 
 }
-span{
+#find{
     color: #009688;
+      font-size: 50px;
+      line-height: 1.2;
+      opacity: 0;
+      animation: slideRight 1s ease forwards;
+      animation-delay: 0.2s; 
 }
+
 .btn{
     display: inline-block;
     padding: 10px 28px;
@@ -199,12 +212,14 @@ transition: 0.2s;
 }
 
 
+
+
 .row{
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 ul{
-    list-style: none;
+  list-style: none;
 }
 
 .footer{
@@ -269,10 +284,16 @@ ul{
     background-color: #ffffff;
     
 }
-@media (max-width: 768px) {
-    .banner {
-        padding: 2% 1%;
-    }
+@media screen and (max-width: 768px) {
+  .footer-col {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .footer-col h4::before {
+    width: 30px;
+  }
 }
 @keyframes zoomOut{
 0%{
@@ -562,7 +583,7 @@ height:32em;
   width: 100%;
   height: 100vh;
   font-family: sans-serif;
-  background: rgb(194, 165, 144);
+  background: rgb(46, 42, 42);
   color:#fff; 
   display: flex ;
   align-items: center;
