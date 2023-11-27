@@ -154,10 +154,29 @@ ul{
     width: 25px;
     height: auto;
 }
+.kryesor{
+    display: flex;
+    flex-direction:row;
+  
+}
 .foto-fulltime{
     display: flex;
     flex-direction: row;
 }
+
+.foto-lokacion{
+    margin-left: 2.5em;
+    display: flex;
+    flex-direction: row;
+}
+.foto-lokacion img{
+    margin-right: 4px;
+}
+
+  .lokacion{
+    margin-top: 2px;
+  }
+
 .time{
     margin-left: 4px;
     margin-top: 2px;
