@@ -46,8 +46,11 @@
                          <div class="lokacion">London (remote-optional)</div>
                           </div>
               </div>
+
             <div class="details">Software Development; Technical Leadership; System Architecture and Optimization</div>
-                <a href="#" class="details-btn">Learn More</a>
+        
+            
+                 <a href="#" class="details-btn" onclick="showJobDetails()">Learn More</a>
                 <span class="open-positions">3 open poitions</span>
         </div>
         <div class="puna">
@@ -520,5 +523,70 @@
             </div>
         </div>
     </footer>
+    <div id="jobDetailsBox" class="job-details-box">
+        <h3> The Opportunity:  Hybrid Role:</h3>
+       <p> Come join a relentless team of software engineers dedicated to helping the legal world collaborate on their strategic goals and identify new business opportunities within their existing clients. You will help grow our development team by participating in the full SDLC (Software Development Lifecycle) from preliminary system analysis to testing and deployment. This hybrid-engineering role includes building high quality and fully performing software that meets quality and software development standards alongside a great group of smart, motivated people, with a focus on customer delight. </p>
+       <h3>A Day in the Life: </h3> 
+       <ul id="req">
+        <li>Take ownership of product features from estimates to design and development </li>
+    <li>Write clean, maintainable code that is extensible with minimum number of defects</li>   
+<li>Refactor and improve existing software </li>   
+<li>Collaborate with cross-functional teams (PM, QA) to complete tasks</li>
+<li>Manage individual task priorities, deadlines, and deliverables </li>
+<li>Provide guidance on modern software engineering techniques and methodologies for code reviews </li>
+<li>Coach and mentor less experienced team members</li>
+</ul>
+<h3>Role progression: </h3>
+Within 1 month, you will: 
+<ul id="req">
+    <li>Complete our Engineering onboarding plan </li>
+    <li>Meet the team and learn the details of our business, as well as where we are headed </li>
+<li>Familiarize yourself with our Software Development Life Cycle and our specific flavor of Scrum </li>
+<li>Participate in Scrum ceremonies </li>
+</ul>Within 6 months, you will: 
+<ul id="req">
+    <li>Contribute, as a fully integrated member of your Scrum team </li>
+    <li>Complete assigned tasks within the given timeframe</li>
+    <li>Write code that is readable, extensible, well commented, and that does not require multiple iterations to correct issues found by QA </li>
+<li>Require minimal supervision for assigned tasks </li>
+<li>Assist, guide, advise, and help team members: </li>
+<li>to complete their assignments within the given timeframe </li>
+</ul>
+<h3>Requirements  About You: </h3>
+<ul id="req">6+ years experience in C#.NET
+
+  <li>Good knowledge of development using JS/React/CSS at a mid-senior level (4+ years) </li>  
+    
+  <li>Good knowledge of development using PHP & Laravel at a mid-senior level (4+ years) </li>  
+    
+  <li>Ability to work with legacy PHP & JS code</li>  
+    
+  <li>Good understanding of design patterns and OOP concepts</li>  
+    
+  <li>Good knowledge of building and extending REST APIs </li>  
+    
+  <li>Good knowledge of SQL database design </li>  
+    
+  <li>Knowledge of source control with Git, especially branching/merging as needed </li>  
+    
+  <li>Familiar with Atlassian products – JIRA </li>  
+    
+  <li>Familiarity with agile techniques </li>  
+    
+  <li>Experience with unit/integration/acceptance tests </ul>
+       <a href="#" class="close-btn" onclick="closeJobDetails()">Close</a>
+    </div>
 </body>
+<script>
+    function showJobDetails() {
+        var jobDetailsBox = document.getElementById('jobDetailsBox');
+        jobDetailsBox.style.display = 'block';
+        jobDetailsBox.style.overflowY = 'auto';
+    }
+
+    function closeJobDetails() {
+        var jobDetailsBox = document.getElementById('jobDetailsBox');
+        jobDetailsBox.style.display = 'none';
+    }
+</script>
 </html>
