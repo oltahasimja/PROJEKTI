@@ -14,7 +14,7 @@
     <div class="inner-box" id="card">
         <div class="card-front">
             <h2>LOGIN</h2>
-            <form>
+            <form onsubmit="return validateform()">
                 <input type="email" class="input-box" placeholder="Your Email ID" required>
                 <input type="password" class="input-box" placeholder="Password" required>
                 <button type="submit" class="submit-btn1">Submit</button>
@@ -47,6 +47,20 @@
         }
         function openLogin(){
             card.style.transform = "rotateY(0deg)";
+        }
+        function validateform(){
+            var email=document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if(!emailRegex.test(email)){
+                alert('Please enter a valid address');
+                return false;
+            }
+            if(password.length<6){
+                alert('Password must be at least 6 characters long');
+                return false;
+            }
+            return true;
         }
     </script>
 </body>
