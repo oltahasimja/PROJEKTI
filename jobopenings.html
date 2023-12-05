@@ -526,6 +526,7 @@
     <div id="jobDetailsBox" class="job-details-box">
         <h3> The Opportunity:  Hybrid Role:</h3>
        <p> Come join a relentless team of software engineers dedicated to helping the legal world collaborate on their strategic goals and identify new business opportunities within their existing clients. You will help grow our development team by participating in the full SDLC (Software Development Lifecycle) from preliminary system analysis to testing and deployment. This hybrid-engineering role includes building high quality and fully performing software that meets quality and software development standards alongside a great group of smart, motivated people, with a focus on customer delight. </p>
+       <br>
        <h3>A Day in the Life: </h3> 
        <ul id="req">
         <li>Take ownership of product features from estimates to design and development </li>
@@ -536,6 +537,7 @@
 <li>Provide guidance on modern software engineering techniques and methodologies for code reviews </li>
 <li>Coach and mentor less experienced team members</li>
 </ul>
+<br>
 <h3>Role progression: </h3>
 Within 1 month, you will: 
 <ul id="req">
@@ -552,6 +554,7 @@ Within 1 month, you will:
 <li>Assist, guide, advise, and help team members: </li>
 <li>to complete their assignments within the given timeframe </li>
 </ul>
+<br>
 <h3>Requirements  About You: </h3>
 <ul id="req">6+ years experience in C#.NET
 
@@ -574,6 +577,18 @@ Within 1 month, you will:
   <li>Familiarity with agile techniques </li>  
     
   <li>Experience with unit/integration/acceptance tests </ul>
+    <br>
+        <div id="applyForm">
+            <h3 style="color: white; display: flex; justify-content: center;">Add your CV</h3>
+            <br>
+            <form onsubmit="return validateApplyForm()">
+                <label for="cv" style="color: white; margin-left: 2.5em;">Upload your CV:   </label>
+                <input type="file" id="cv" name="cv" accept=".pdf, .doc, .docx" style="margin-left: 1em;">
+                <br>
+                <button type="submit" id="butoniApply"><b>Apply</b></button>
+            </form>
+        </div>
+    
        <a href="#" class="close-btn" onclick="closeJobDetails()">Close</a>
     </div>
 </body>
@@ -588,5 +603,24 @@ Within 1 month, you will:
         var jobDetailsBox = document.getElementById('jobDetailsBox');
         jobDetailsBox.style.display = 'none';
     }
+
+    function openApplyForm() {
+    var card = document.getElementById("card");
+    var applyForm = document.getElementById("applyForm");
+
+    card.style.transform = "rotateY(180deg)";
+    applyForm.style.display = "block";
+}
+
+function validateApplyForm() {
+
+    var cvFile = document.getElementById('cv').files[0];
+    if (!cvFile) {
+        alert('Please upload your CV.');
+        return false;
+    }
+    alert('Application submitted successfully!');
+    return true;
+}
 </script>
 </html>

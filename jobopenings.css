@@ -324,12 +324,25 @@ align-content: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background-color: #ccc;
     padding: 20px;
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 9999;
     border-radius: 20px;
+}
+#butoniApply{
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-left: 43%;
+    padding: 5px;
+    width: 6.5em;
+    height: 2.5em;
+    margin-top: 3%;
+}
+#applyForm{
+    border: 2px solid rgb(87, 87, 87);
+    background-color: rgb(87, 87, 87);
 }
 
 .close-btn {
