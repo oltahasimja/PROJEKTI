@@ -356,7 +356,7 @@ align-content: center;
 #req{
     list-style-type: circle;
 }
-#jobDetailsBox {
+.job-details-box{
     max-height: 400px; 
     overflow-y: auto; 
 }
