@@ -166,7 +166,60 @@ transition: 0.2s;
     max-width: 1170px;
     margin: auto;
 }
-@media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
+    .banner {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .banner .rombi2 {
+        width: 300px;
+        height: 300px;
+    }
+    
+.partition-11 {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  padding-top: 169px;
+}
+
+.shkallet {
+  margin-top: 6em;
+}
+
+.shkallet .rombi {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  background: none;
+  border: 25px solid #009688;
+  box-shadow: -10px 10px 10px;
+  opacity: 0;
+  animation: zoomOut 1s ease forwards;
+  animation-delay: 0.3s;
+  transform: rotate(45deg);
+}
+    .content {
+        padding-top: 50px;
+        text-align: center;
+    }
+
+    #Unlock,
+    #find,
+    h3,
+    .btn,
+    .rombi,
+    .shkallet {
+        margin-left: 0;
+    }
+
+    .btn {
+        margin: 20px auto;
+    }
+
   .navigationbar {
       flex-direction: column;
       height: auto;
