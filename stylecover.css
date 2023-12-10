@@ -36,7 +36,7 @@
 }
  .content{
 padding-top: 169px;
-
+margin-right: 50px;
 }
 .content #Unlock{
 
@@ -72,19 +72,19 @@ animation-delay: 0.2s;
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 300;
-margin-left: 350px;
-margin-top: 80px;
-opacity: 0;
-animation: slideRight 1s ease forwards;
-animation-delay: 0.2s; 
+    margin-left: 350px;
+    margin-top: 80px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 0.2s; 
 
 }
  .shkallet{
-position: relative;
-width: 380px;
-height: 380px;
-transform: rotate(45deg);
-margin-top: 80px;
+   position: relative;
+    width: 380px;
+    height: 380px;
+    transform: rotate(45deg);
+    margin-top: 80px;
 
 }
 .shkallet .rombi{
@@ -93,10 +93,10 @@ margin-top: 80px;
     height: 100%;
     background:none;
     border: 25px solid #009688;
-box-shadow: -15px 15px 15px;
-opacity: 0;
-animation: zoomOut 1s ease forwards;
-animation-delay:0.3s ;
+    box-shadow: -15px 15px 15px;
+    opacity: 0;
+    animation: zoomOut 1s ease forwards;
+    animation-delay:0.3s ;
 }
 .shkallet .rombi img{
     position: absolute;
@@ -153,9 +153,9 @@ position:relative;
     width: 0;
     background: #009688;
     position: absolute;
-left:0;
-bottom: -10px;
-transition: 0.2s;
+    left:0;
+    bottom: -10px;
+    transition: 0.2s;
 }
 .navigationbar ul li:hover::after{
     width: 100%;
@@ -205,6 +205,7 @@ transition: 0.2s;
     .content {
         padding-top: 50px;
         text-align: center;
+      
     }
 
     #Unlock,
@@ -437,13 +438,18 @@ ul{
     width: 45%;
     height:100%;
     margin-right: 0.5em;
-    
+    animation-name: slideRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
   }
   .texti{
     margin-left: 2.3em;
     margin-right: 2.3em;
     line-height: 1.5em;
     text-align: center;
+    animation-name: slideRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
   }
   #ourvalues{
     font-size: 2.6em;
@@ -521,7 +527,9 @@ ul{
    align-self: center;
    text-justify: inter-word;
    font-size:2.5em;
-  
+ 
+   animation: zoomOut 1s ease forwards;
+   
   }
 
   .historia{
@@ -535,6 +543,8 @@ ul{
 
   .vitet{
     margin-left: 16em;
+    animation: zoomOut 1s ease forwards;
+    
   }
 
   .viti-2016 img{
@@ -585,12 +595,14 @@ ul{
   .div-3{
     display: flex;
     flex-direction:column;
+    animation: zoomOut 1s ease forwards;
+    
   }
   .div-4{
   margin-bottom: 4.5em;
   margin-left: 7.5em;
-width:34em;
-line-height: 1.8em;
+  width:34em;
+  line-height: 1.8em;
   }
 .div-5{
   margin-bottom: 4.5em;
