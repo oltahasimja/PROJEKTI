@@ -27,7 +27,7 @@
              <h1 id="Unlock">Unlock Your Potential,<br> <span id="find">Find Your Path to Success</span></h1>
              <br>
              <h3>Your success story begins here – let us guide you towards a fulfilling and rewarding career.</h3>
-             <a href="#" class="btn"><h2>Get Started</h2></a>
+             <a href="loginform.html" class="btn"><h2>Get Started</h2></a>
               </div>
              <div class="shkallet">
   
@@ -75,33 +75,6 @@
             </div>
         </div>
     </footer>
-    <script>
-        let currentIndex = 0;
-        const slides = document.querySelector('.slides');
-        const totalSlides = document.querySelectorAll('.slide').length;
-
-        document.querySelector('.next').addEventListener('click', () => {
-            if (currentIndex < totalSlides - 1) {
-                currentIndex++;
-            } else {
-                currentIndex = 0;
-            }
-            updateSlider();
-        });
-
-        document.querySelector('.prev').addEventListener('click', () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-            } else {
-                currentIndex = totalSlides - 1;
-            }
-            updateSlider();
-        });
-
-        function updateSlider() {
-            const translateValue = -currentIndex * 100 + '%';
-            slides.style.transform = `translateX(${translateValue})`;
-        }
-    </script>
+   
 </body>
 </html>
