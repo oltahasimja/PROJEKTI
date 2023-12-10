@@ -655,16 +655,51 @@ line-height: 1.8em;
    text-justify: inter-word;
    font-size:2.5em;
 }
+
+.meet{
+  display: flex;
+  flex-direction: column;
+}
+.join{
+    display: inline-block;
+    text-align: center;
+    padding: 12px 30px;
+    width: 20em;
+    background: rgb(46, 122, 119);
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    font-size: 16px;
+    margin-left: 2em;
+    color: #eaeaea;
+    
+}
 .team img{
 width:50em;
 height:32em;
 }
+.team {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Adjust the height based on your layout */
+}
+
+#meetourteam {
+  text-align: center;
+  font-size: 2.5em;
+  border-bottom: 5px double;
+  width: 10em;
+  margin-bottom: 2em;
+}
+
+
 /*login-signup*/
 .containerlog{
   width: 100%;
   height: 100vh;
   font-family: sans-serif;
-  background: rgb(46, 42, 42);
+  background: rgb(217, 223, 142);
   color:#fff; 
   display: flex ;
   align-items: center;
@@ -673,7 +708,7 @@ height:32em;
 .card{
   width: 350px;
   height: 500px;
-  box-shadow: 0 0 40px 20px rgba(0,0,0,0.26);
+  box-shadow: 0 0 40px 20px rgba(121, 102, 18, 0.986);
   perspective: 1000px;
 }
 .inner-box{
