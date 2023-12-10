@@ -17,7 +17,10 @@
     align-items: top;
     padding: 9px 6% 0;
     overflow: hidden;
-
+  
+  
+    border: 2px solid #fff; 
+    border-radius: 10px; 
 }
 .partition-11{
   display: flex;
@@ -681,8 +684,8 @@ height:32em;
 .team {
   display: flex;
   justify-content: center;
-  align-items: center; /* Center vertically */
-  height: 100vh; /* Adjust the height based on your layout */
+  align-items: center; 
+  height: 100vh; 
 }
 
 #meetourteam {
