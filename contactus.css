@@ -87,7 +87,7 @@ ul{
         display: block;
         margin: 10px 0;
         position: relative;
-        font-size: 17px;
+        font-size: 13px;
          
     }
   
@@ -237,4 +237,71 @@ textarea{
     color: #03a9f4;
 }
 
+@media screen and (max-width: 768px) {
+    .all {
+        flex-direction: column;
+        margin-top: 3em;
+        margin-bottom: 3em;
+    }
+
+    .forma {
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0;
+        padding: 1em;
+    }
+
+    .forma p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .forma input,
+    textarea {
+        width: 100%;
+        height: 35px;
+        padding: 1px 15px;
+        border: 2px solid #eeeeee;
+        font-size: 14px;
+        margin: 10px auto;
+    }
+
+    textarea {
+        height: 100px;
+    }
+
+    .contact {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    #submit-btn {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 20px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .forma p {
+        font-size: 12px;
+    }
+
+    .forma input,
+    textarea {
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .contact,
+    #reachus {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    #submit-btn {
+        font-size: 14px;
+    }
+}
 
