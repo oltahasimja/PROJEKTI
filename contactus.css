@@ -1,11 +1,138 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: sticky;
+    padding: 0;
+    z-index: 1000;
+}
+
+
+.navigationbar{
+    width: 100%;
+    height: 30px;
+    margin: auto;
+    padding: 45px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:  rgb(230, 230, 230);
+}
+.logo{
+    width: 193px;
+    height: 83px;
+    cursor: pointer;
+    margin-left:30px;
+    
+
+}
+.navigationbar ul{
+    margin-right: 50px;
+}
+.navigationbar ul li{
+    list-style: none;
+    display:inline-block ;
+    margin: 0 20px;
+position:relative;
+font-family: sans-serif;
+}
+
+.navigationbar ul li a{
+    text-decoration: none;
+    color:rgb(41, 37, 37);
+    text-transform: uppercase;
+}
+.navigationbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+left:0;
+bottom: -10px;
+transition: 0.2s;
+}
+.navigationbar ul li:hover::after{
+
+    width: 100%;
+}
+
+
+ul{
+    list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+    .navigationbar {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+    }
+  
+    .logo {
+        margin-left: 15px;
+    }
+  
+    .navigationbar ul {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        display: flex;
+        justify-content: center; 
+    }
+  
+    .navigationbar ul li {
+        display: block;
+        margin: 10px 0;
+        position: relative;
+        font-size: 17px;
+         
+    }
+  
+    .navigationbar ul li::after {
+        display: none;
+    }
+  
+    .navigationbar {
+        padding: 10px 0;
+        background-color:  rgb(230, 230, 230);
+    }
+  
+    .logo {
+        width: 120px; 
+        height: 50px; 
+    }
+    
+    .header-ul{
+        margin-left: 15px;
+    }
+
+    .header-ul :first-child{
+        margin-left: 0px;
+    }
+
+    .header-ul :nth-child(2){
+        margin-left: 10px;
+    }
+    .header-ul :nth-child(3){
+        margin-left: 10px;
+    }
+    .header-ul :last-child{
+        margin-left: 10px;
+    }
+  }
 *{
     font-family: Nunito, sans-serif;
 }
 
 .all{
+    margin-top: 5em;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-bottom: 7em;
     
 }
 
