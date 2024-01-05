@@ -9,15 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header>    <div class="navigationbar">
-        <img src="logo.png" class="logo">
-        <ul class="header-ul">
-            <li><a href="cover.html">Home</a></li>
-            <li><a href="aboutus.html">About Us</a></li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="jobopenings.html">Job Openings</a></li>
-        </ul>
-    </div></header>
+    <?php include 'header.php'; ?>
     <div class="banner2">
         <div class="title">
             <div id="titull">Meet The Team</div></div>

@@ -8,16 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <header>   
-        <div class="navigationbar">
-       <img src="logo.png" class="logo">
-       <ul class="header-ul">
-        <li><a href="cover.html">Home</a></li>
-        <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="careers.html">Careers</a></li>
-        <li><a href="jobopenings.html">Job Openings</a></li>
-       </ul>
-   </div></header>
+    <?php include 'header.php'; ?>
    <div class="banner2">
         <div class="blloku1">
 
@@ -158,8 +149,14 @@
         
     </div>
     <div class="team">
+        <div class="meet">
+        <p id="meetourteam">Meet our team</p>
+        <a href="loginform.html" class="join"><h2>Join Us</h2></a>
+    </div>
         <img src="team.jpg" alt="">
     </div>
+        
+
         </div>
   
 
