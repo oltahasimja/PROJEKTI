@@ -891,3 +891,149 @@ span{
   margin-top: 8px;
 
 }
+@media only screen and (max-width: 768px) {
+  .blloku1{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 38em;
+  }
+  .blloku1 img {
+    width: 115%;
+    height: 15em;
+    margin-bottom: 1em;
+  }
+  .div2{
+    
+  
+  }
+  .div1 p{
+    margin-left: -2em;
+    max-width:25em;
+  }
+  .divK{
+    display: flex;
+    flex-direction: row;
+    margin-left: 0em;
+    width: 10em;
+    margin-top: 10em;
+  }
+  .viti-2016{
+
+    font-size:10px;
+    margin-top:40em;
+  }
+  .viti-2020{
+    font-size: 10px;
+    margin-top: 25em;
+  }
+  .viti-2023{
+    font-size: 10px;
+    margin-top: 20em;
+  }
+  .historia{
+    display: flex;
+    flex-direction: row;
+    margin-left: 0em;
+    margin-bottom: 3em;
+  }
+  .divv1{
+    display: flex;
+    flex-direction: row;
+    margin-left:-15em;
+  }
+  .dot-div{
+    margin-left: -6em;
+  }
+  .dot1{
+    margin-top:-52.5em;
+  }
+  .dot2{
+    margin-top:-28.8em;
+  }
+  .dot3{
+    margin-top:-8.6em;
+  }
+  .line{
+    margin-top: 26em;
+    margin-left: 2em;
+    height: 59em;
+  }
+  .div-4{
+    margin-top:25em;
+    width:14em;
+    margin-left:1.5em;
+  }
+  .div-5{
+    margin-top:-2em;
+    width:14em;
+    margin-left:1.5em;
+  }
+  .div-6{
+    width: 14em;
+    margin-left:1.5em;
+  }
+  .work{
+    margin-top: 18em;
+  }
+  .work-title{
+    margin-top: 2em;
+  }
+  .tabelat{
+    margin-top:20em;
+    display: flex;
+    flex-direction: column;
+  }
+  .tabela-1{
+    margin-top: -8em;
+    width: 35em;
+  }
+  .tabela-2{
+    margin-top:-8em;
+    width: 35em;
+    border-left: 0;
+    border-right: 0;
+  }
+  .tabela-3{
+    margin-top:-8em;
+    margin-bottom: 3em;
+    width: 35em;
+  }
+  .blloku2{
+    margin-top: 6em;
+    display: flex;
+    flex-direction: column;
+    height: 30em;
+  }
+  .texti{
+    margin-top: 2em;
+  }
+  .blloku2 img{
+    margin-top: 2em;
+    width: 100%;
+    height: 14em;
+  }
+  .services{
+    display: flex;
+    flex-direction: column;
+  }
+  .img-div{
+    margin-top: 2em;
+    width: 4em;
+    height: 4em;
+  }
+  .team{
+    margin-top:-9em;
+    display: flex;
+    flex-direction:column-reverse;
+  }
+  #foto-team{
+    height: 22em;
+  }
+  .meet{
+    margin-top: 2em;
+  }
+  #why{
+    text-align: center;
+  }
+}
