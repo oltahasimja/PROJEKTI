@@ -50,7 +50,7 @@
 
         //Pjesa tjeter e funksioneve CRUD: update 
         //dergohet parametri ne baze te cilit e identifikojme jobn (ne kete rast id, por mund te jete edhe ndonje atribut tjeter) dhe parametrat e tjere qe mund t'i ndryshojme (emri, mbiemri, etj...)
-        public function editStudent($id, $jobTitle, $orari, $lokacioni,  $detajet , $pozitaTeHapura){
+        public function editJob($id, $jobTitle, $orari, $lokacioni,  $detajet , $pozitaTeHapura){
             $conn = $this->connection;
             $sql = "UPDATE job SET JobTitle=?,Orari=?, Lokacioni=?, Detajet=?,PozitaTeHapura=? WHERE Id=?";
 
