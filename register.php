@@ -13,7 +13,9 @@ if (isset($_POST['submitbtn'])) {
 
     $punaRepository = new PunaRepository();
     $punaRepository->insertPuna($puna);
+  
     header("location:dashboard.php");
+    exit();
 }
 ?>
 
@@ -84,11 +86,11 @@ if (isset($_POST['submitbtn'])) {
 </style>
 
 
-
     <body>
         <div class="istambul">
         <h1>Register</h1>
-        <form action="<?php echo $SERVER['PHP_SELF']?>" method="POST"> 
+      
+<form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
             <label>Job Title:</label> 
             <input type="text" name="jobTitle" ><br>
             <label>Orari:</label>
@@ -98,7 +100,7 @@ if (isset($_POST['submitbtn'])) {
             <label>Detajet:</label>
             <input type="text" name="detajet" ><br>
             <label>PozitaTeHapura:</label>
-            <input type="text" name="pozitaTeHapura" ><br>
+            <input type="text" name="pozitaTeHapura" required><br>
             <input type="submit" name="submitbtn" value="Submit">
         </form>
 

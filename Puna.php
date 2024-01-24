@@ -46,10 +46,10 @@ class Puna{
     }
 
     public function getPozitaTeHapura(){
-        return $this->DataELindjes;
+        return $this->PozitaTeHapura;
     }
-    public function setPozitaTeHapura($e){
-        $this->PozitaTeHapura = $e;
+    public function setPozitaTeHapura($gj){
+        $this->PozitaTeHapura = $gj;
     }
 
 
