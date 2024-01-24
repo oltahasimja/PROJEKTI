@@ -2,9 +2,9 @@
 class DatabaseConnection{
     //keto te dhena i merrni ne baze te databazes suaj
     private $host = "localhost";
-    private $username = "job";
+    private $username = "root";
     //private $password = "12345678";
-    private $db = "jobs";
+    private $db = "register";
 
 function startConnection(){
     try{
