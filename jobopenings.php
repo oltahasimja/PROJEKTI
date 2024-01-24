@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,6 +24,18 @@
             </button>
         </div>  
     </div>
+
+    <?php
+        session_start();
+
+        echo "Pershendetje, ".$_SESSION['email'];
+        // if($_SESSION['roli']=="admin"){
+        //     echo"<button>
+        //             <a href='dashboard.php'>Dashboard</a>
+        //         </button>";
+        // }
+    ?>
+
     <div class="punet">
         <div class="puna">
             <img src="c.jpg" alt="" style="width: 70px; height: auto;">

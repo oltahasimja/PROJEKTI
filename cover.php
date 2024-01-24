@@ -17,7 +17,7 @@
              <h1 id="Unlock">Unlock Your Potential,<br> <span id="find">Find Your Path to Success</span></h1>
              <br>
              <h3>Your success story begins here – let us guide you towards a fulfilling and rewarding career.</h3>
-             <a href="loginform.html" class="btn"><h2>Get Started</h2></a>
+             <a href="loginform.php" class="btn"><h2>Get Started</h2></a>
               </div>
              <div class="shkallet">
   
