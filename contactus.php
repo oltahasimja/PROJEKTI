@@ -11,19 +11,19 @@
 <?php include 'header.php'; ?>
 <div class="all">
     <div class="forma">
-        <form onsubmit="return validateform()">
+        <form onsubmit="return validateform()" method="POST">
             <div class="contact">Contact Us & Get in touch</div>
             <p>First Name:<br>
-            <input type="text" id="first_name"></p>
+            <input type="text" id="first_name" name="first_name"></p>
             <p>Last Name:<br>
-            <input type="text" id="last_name"></p>
+            <input type="text" id="last_name" name="last_name"></p>
             <p>E-mail:<br>
-            <input type="text" id="email"></p>
+            <input type="text" id="email" name="email"></p>
             <p>Phone Number:<br>
-            <input type="text" id="phone"></p>
+            <input type="text" id="phone" name="phone"></p>
             <p>What do you have in mind?<br>
-            <textarea id="comments" cols="40" rows="10" style="border-color: #eeeeee; border:2px solid #eeeeee"></textarea></p>
-            <p><input type="submit" id="submit-btn" value="Send"></p>
+            <textarea id="comments" cols="40" rows="10" name="comments" style="border-color: #eeeeee; border:2px solid #eeeeee"></textarea></p>
+            <p><input type="submit" id="submit-btn" value="Send" name='input'></p>
         </form>
     </div>
     <div class="harta">
@@ -40,6 +40,22 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.675080355656!2d-87.64407712452093!3d41.87833667124184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2cc10885b721%3A0x7a7c279e1e7514d5!2s550%20W%20Jackson%20Blvd%2C%20Chicago%2C%20IL%2060661%2C%20USA!5e0!3m2!1sen!2s!4v1704473623666!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </div>
+            <?php
+                if(isset($_POST['input'])){
+                      include_once 'function.php';
+
+                      $obj= new Contact();
+                      $res = $obj->contact_us($_POST);
+
+                      if($res == true){
+                        echo "<script>alert('Query successfully Submitted .Thank You')</script>";
+                      }
+                      else{
+                        echo "<script>alert('Something Went wrong!!')</script>";
+                      }
+                }
+
+            ?>
     <script>
         function validateform() {
             var email = document.getElementById('email').value;

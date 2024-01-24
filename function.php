@@ -7,19 +7,22 @@
         public $mysqli;
 
         public function __construct(){
-             $this->mysqli = new mysqli($this->host , $this->user,$this->pass, $this->db);
-        }
-        public function contact_us($data){
-             $fname=$data['first_name'];
-             $lname=$data['last_name'];
-             $email=$data['email'];
-             $phone=$data['phone'];
-             $message=$data['comments'];
-             $q="insert into contact_us set first_name='$fname', last_name='$lname',email='$email', phone='$phone',comments="$message"";
+            $this->mysqli = new mysqli($this->host , $this->user,$this->pass, $this->db);
+       }
+       public function contact_us($data){
+        $fname = $data['first_name'];
+        $lname = $data['last_name'];
+        $email = $data['email'];
+        $phone = $data['phone'];
+        $message = $data['comments'];
 
-             return $this->mysqli->query($q);
+        // Using prepared statement to prevent SQL injection
+        $stmt = $this->mysqli->prepare("INSERT INTO contact_us (first_name, last_name, email, phone, comments) VALUES (?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssss", $fname, $lname, $email, $phone, $message);
+        $result = $stmt->execute();
+        $stmt->close();
 
-
-        }
+        return $result;
     }
+}
 ?>
