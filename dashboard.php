@@ -10,6 +10,10 @@ $puna = $jbrep->getAllJobs();
 
 <!DOCTYPE html>
 <html>
+<?php include 'header.php'; ?>
+<link rel="stylesheet" href="dashboard.css">
+<link rel="stylesheet" href="stylecover.css">
+
     <body>
     <a href='register.php'>Register</a>
         <table>
@@ -37,4 +41,5 @@ $puna = $jbrep->getAllJobs();
             </tbody>
         </table>
     </body>
+
 </html>
