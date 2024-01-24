@@ -1,6 +1,6 @@
 <?php
-include_once 'Puna.php';
-include_once 'PunaRepository.php';
+include_once ('Puna.php');
+include_once ('PunaRepository.php');
 
 if (isset($_POST['submitbtn'])) {
     $jobTitle = $_POST['jobTitle'];
@@ -22,7 +22,7 @@ if (isset($_POST['submitbtn'])) {
     <head>
     </head>
     <body>
-        <form action="<?php echo $SERVER['PHP_SELF']?>" method="post">  
+        <form action="<?php echo $SERVER['PHP_SELF']?>" method="POST">  
             <input type="text" name="jobTitle" ><br>
             <input type="text" name="orari" ><br>
             <input type="date" name="lokacioni" ><br>

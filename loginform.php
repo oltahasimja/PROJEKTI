@@ -6,11 +6,11 @@
     include("db.php");
 
         if($_SERVER['REQUEST_METHOD'] == "POST"){
-            $email = $_POST['email'];
+            $name = $_POST['name'];
             $pass = $_POST['pass'];
 
-            if(!empty($email) && !empty($pass) && !is_numeric($email)){
-                $query= "Select * From form where email = '$email' limit 1";
+            if(!empty($name) && !empty($pass) && !is_numeric($name)){
+                $query= "Select * From form where name = '$name' limit 1";
                 $result = mysqli_query($con, $query);
 
                 if($result){
@@ -19,6 +19,9 @@
                         $user_data = mysqli_fetch_assoc($result);
 
                         if($user_data['pass'] == $pass){
+                            session_start();
+                            $_SESSION['name'] = $user_data['name'];
+                            $_SESSION['roli'] = $user_data['roli'];                            
                             header("location:cover.php");
                             die;
 
@@ -54,7 +57,7 @@
         <div class="card-front">
             <h2>LOGIN</h2>
             <form  onsubmit="return validateform()" method ="POST">
-                <input type="email" name="email" id='email' class="input-box" placeholder="Your Email ID" required>
+                <input type="text" name="name" id='name' class="input-box" placeholder="Your Username" required>
                 <input type="password" name="pass" id='password' class="input-box" placeholder="Password" required>
                 <input type="submit" class="submit-btn1">
                 
@@ -68,13 +71,13 @@
     
     <script>
         function validateform(){
-            var email=document.getElementById('email').value;
+            var name=document.getElementById('name').value;
             var password = document.getElementById('password').value;
-            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if(!emailRegex.test(email)){
-                alert('Please enter a valid address');
-                return false;
-            }
+            var nameRegex=/^[a-zA-Z\s]+$/;
+        if (!nameRegex.test(name)) {
+            alert('Please enter your name');
+            return false;
+        }
             if(password.length<6){
                 alert('Password must be at least 6 characters long');
                 return false;

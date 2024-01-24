@@ -52,7 +52,7 @@
         //dergohet parametri ne baze te cilit e identifikojme jobn (ne kete rast id, por mund te jete edhe ndonje atribut tjeter) dhe parametrat e tjere qe mund t'i ndryshojme (emri, mbiemri, etj...)
         public function editJob($id, $jobTitle, $orari, $lokacioni,  $detajet , $pozitaTeHapura){
             $conn = $this->connection;
-            $sql = "UPDATE job SET JobTitle=?,Orari=?, Lokacioni=?, Detajet=?,PozitaTeHapura=? WHERE Id=?";
+            $sql = "UPDATE job SET JobTitle=?,Orari=?, Lokacioni=?, Detajet=?,PozitaTeHapura=? WHERE ID=?";
 
             $statement = $conn->prepare($sql);
             $statement->execute([ $jobTitle, $orari, $lokacioni,  $detajet , $pozitaTeHapura, $id]);
@@ -66,7 +66,7 @@
         function deleteJobs($id){
             $conn = $this->connection;
 
-            $sql = "DELETE FROM job WHERE Id=?";
+            $sql = "DELETE FROM job WHERE ID=?";
 
             $statement = $conn->prepare($sql);
             $statement->execute([$id]);
@@ -77,7 +77,7 @@
         function getJobById($id){
             $conn = $this->connection;
 
-            $sql = "SELECT * FROM job WHERE Id=?";
+            $sql = "SELECT * FROM job WHERE ID=?";
 
             $statement = $conn->prepare($sql);
             $statement->execute([$id]);

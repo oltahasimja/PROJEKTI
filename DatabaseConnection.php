@@ -12,10 +12,8 @@ function startConnection(){
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         if(!$conn){
-            echo "Connection failed ";
             return null;
         }else{
-            echo "Connection successful!";
             return $conn;
         }
         

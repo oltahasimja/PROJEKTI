@@ -28,12 +28,11 @@
     <?php
         session_start();
 
-        echo "Pershendetje, ".$_SESSION['email'];
-        // if($_SESSION['roli']=="admin"){
-        //     echo"<button>
-        //             <a href='dashboard.php'>Dashboard</a>
-        //         </button>";
-        // }
+         if($_SESSION['roli']=="admin"){
+             echo"<button>
+                     <a href='dashboard.php'>Dashboard</a>
+                 </button>";
+         }
     ?>
 
     <div class="punet">
@@ -165,12 +164,12 @@
             <div class="details">Infrastructure Automation; Monitoring and Incident Response; Continuous Integration/Deployment (CI/CD)</div>
                 <a href="#" class="details-btn" onclick="showJobDetails6()">Learn More</a>
                 <span class="open-positions">3 open positions</span>
-        </div> <div class="puna">
+         </div> <div class="puna">
             <img src="human.jpg" alt="" style="width: 70px; height: auto;">
             <h3 class="job-title">Human Resources Business Partner</h3>
             <div class="kryesor">
-                <div class="foto-fulltime">
-                    <img src="ora.png" alt="" style="width: 20px; height: auto;">
+                <div class="foto-fulltime"> 
+                     <img src="ora.png" alt="" style="width: 20px; height: auto;">
                     <div class="time">Full time</div>
                     </div>
               
@@ -182,7 +181,7 @@
             <div class="details">Strategic HR Planning; Employee Relations and Engagement; Talent Management and Development</div>
                 <a href="#" class="details-btn" onclick="showJobDetails7()">Learn More</a>
                 <span class="open-positions">3 open positions</span>
-        </div> <div class="puna">
+        </div><!-- <div class="puna">
             <img src="embedded-system-icon-set-four-elements-diferent-styles-industry-icons-collection-creative-filled-outline-colored-flat-161602401.webp" alt="" style="width: 70px; height: auto;">
             <h3 class="job-title">Embedded Systems Engineer</h3>
             <div class="kryesor">
@@ -489,7 +488,7 @@
             <div class="details">Facilitator of Scrum Processes; Servant Leadership; Continuous Improvements</div>
                 <a href="#" class="details-btn" onclick="showJobDetails24()">Learn More</a>
                 <span class="open-positions">21 open positions</span>
-        </div>
+        </div> -->
     </div>
 </div>
  
@@ -980,7 +979,7 @@ Within 1 month, you will:
     
        <a href="#" class="close-btn" onclick="closeJobDetails7()">Close</a>
     </div>
-    <div id="jobDetailsBox8" class="job-details-box">
+    <!-- <div id="jobDetailsBox8" class="job-details-box">
         <h3>The Opportunity: Embedded Systems Engineer</h3>
         <p>
             Job Opportunity: Embedded Systems Engineer
@@ -2060,7 +2059,7 @@ Within 1 month, you will:
         <br>
         <button type="submit" id="butoniApply"><b>Apply</b></button>
     </form>
-</div>
+</div> -->
 
 <a href="#" class="close-btn" onclick="closeJobDetails24()">Close</a>
 </div>
@@ -2146,184 +2145,184 @@ Within 1 month, you will:
         var jobDetailsBox3= document.getElementById('jobDetailsBox7');
         jobDetailsBox3.style.display = 'none';
     }
-    function showJobDetails8() {
-        var jobDetailsBox3 = document.getElementById('jobDetailsBox8');
-        jobDetailsBox3.style.display = 'block';
-        jobDetailsBox3.style.overflowY = 'auto';
-    }
+    // function showJobDetails8() {
+    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox8');
+    //     jobDetailsBox3.style.display = 'block';
+    //     jobDetailsBox3.style.overflowY = 'auto';
+    // }
 
-    function closeJobDetails8() {
-        var jobDetailsBox3= document.getElementById('jobDetailsBox8');
-        jobDetailsBox3.style.display = 'none';
-    }
-    function showJobDetails9() {
-        var jobDetailsBox3 = document.getElementById('jobDetailsBox9');
-        jobDetailsBox3.style.display = 'block';
-        jobDetailsBox3.style.overflowY = 'auto';
-    }
+    // function closeJobDetails8() {
+    //     var jobDetailsBox3= document.getElementById('jobDetailsBox8');
+    //     jobDetailsBox3.style.display = 'none';
+    // }
+    // function showJobDetails9() {
+    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox9');
+    //     jobDetailsBox3.style.display = 'block';
+    //     jobDetailsBox3.style.overflowY = 'auto';
+    // }
 
-    function closeJobDetails9() {
-        var jobDetailsBox3= document.getElementById('jobDetailsBox9');
-        jobDetailsBox3.style.display = 'none';
-    }
-    function showJobDetails10() {
-        var jobDetailsBox3 = document.getElementById('jobDetailsBox10');
-        jobDetailsBox3.style.display = 'block';
-        jobDetailsBox3.style.overflowY = 'auto';
-    }
+    // function closeJobDetails9() {
+    //     var jobDetailsBox3= document.getElementById('jobDetailsBox9');
+    //     jobDetailsBox3.style.display = 'none';
+    // }
+    // function showJobDetails10() {
+    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox10');
+    //     jobDetailsBox3.style.display = 'block';
+    //     jobDetailsBox3.style.overflowY = 'auto';
+    // }
 
-    function closeJobDetails10() {
-        var jobDetailsBox3= document.getElementById('jobDetailsBox10');
-        jobDetailsBox3.style.display = 'none';
-    }
-    function showJobDetails11() {
-        var jobDetailsBox3 = document.getElementById('jobDetailsBox11');
-        jobDetailsBox3.style.display = 'block';
-        jobDetailsBox3.style.overflowY = 'auto';
-    }
+    // function closeJobDetails10() {
+    //     var jobDetailsBox3= document.getElementById('jobDetailsBox10');
+    //     jobDetailsBox3.style.display = 'none';
+    // }
+    // function showJobDetails11() {
+    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox11');
+    //     jobDetailsBox3.style.display = 'block';
+    //     jobDetailsBox3.style.overflowY = 'auto';
+    // }
 
-    function closeJobDetails11() {
-        var jobDetailsBox3= document.getElementById('jobDetailsBox11');
-        jobDetailsBox3.style.display = 'none';
-    }
-    function showJobDetails12() {
-        var jobDetailsBox3 = document.getElementById('jobDetailsBox12');
-        jobDetailsBox3.style.display = 'block';
-        jobDetailsBox3.style.overflowY = 'auto';
-    }
+    // function closeJobDetails11() {
+    //     var jobDetailsBox3= document.getElementById('jobDetailsBox11');
+    //     jobDetailsBox3.style.display = 'none';
+    // }
+    // function showJobDetails12() {
+    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox12');
+    //     jobDetailsBox3.style.display = 'block';
+    //     jobDetailsBox3.style.overflowY = 'auto';
+    // }
 
-    function closeJobDetails12() {
-        var jobDetailsBox3= document.getElementById('jobDetailsBox12');
-        jobDetailsBox3.style.display = 'none';
-    }
-    function showJobDetails25() {
-        var jobDetailsBox3 = document.getElementById('jobDetailsBox25');
-        jobDetailsBox3.style.display = 'block';
-        jobDetailsBox3.style.overflowY = 'auto';
-    }
+    // function closeJobDetails12() {
+    //     var jobDetailsBox3= document.getElementById('jobDetailsBox12');
+    //     jobDetailsBox3.style.display = 'none';
+    // }
+    // function showJobDetails25() {
+    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox25');
+    //     jobDetailsBox3.style.display = 'block';
+    //     jobDetailsBox3.style.overflowY = 'auto';
+    // }
 
-    function closeJobDetails25() {
-        var jobDetailsBox3= document.getElementById('jobDetailsBox25');
-        jobDetailsBox3.style.display = 'none';
-    }
-    function showJobDetails13() {
-        var jobDetailsBox3 = document.getElementById('jobDetailsBox13');
-        jobDetailsBox3.style.display = 'block';
-        jobDetailsBox3.style.overflowY = 'auto';
-    }
+    // function closeJobDetails25() {
+    //     var jobDetailsBox3= document.getElementById('jobDetailsBox25');
+    //     jobDetailsBox3.style.display = 'none';
+    // }
+    // function showJobDetails13() {
+    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox13');
+    //     jobDetailsBox3.style.display = 'block';
+    //     jobDetailsBox3.style.overflowY = 'auto';
+    // }
 
-    function closeJobDetails13() {
-        var jobDetailsBox3= document.getElementById('jobDetailsBox13');
-        jobDetailsBox3.style.display = 'none';
-    }
-    function showJobDetails14() {
-        var jobDetailsBox3 = document.getElementById('jobDetailsBox14');
-        jobDetailsBox3.style.display = 'block';
-        jobDetailsBox3.style.overflowY = 'auto';
-    }
+    // function closeJobDetails13() {
+    //     var jobDetailsBox3= document.getElementById('jobDetailsBox13');
+    //     jobDetailsBox3.style.display = 'none';
+    // }
+    // function showJobDetails14() {
+    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox14');
+    //     jobDetailsBox3.style.display = 'block';
+    //     jobDetailsBox3.style.overflowY = 'auto';
+    // }
 
-    function closeJobDetails14() {
-        var jobDetailsBox3= document.getElementById('jobDetailsBox14');
-        jobDetailsBox3.style.display = 'none';
-    }
-    function showJobDetails15() {
-        var jobDetailsBox3 = document.getElementById('jobDetailsBox15');
-        jobDetailsBox3.style.display = 'block';
-        jobDetailsBox3.style.overflowY = 'auto';
-    }
+    // function closeJobDetails14() {
+    //     var jobDetailsBox3= document.getElementById('jobDetailsBox14');
+    //     jobDetailsBox3.style.display = 'none';
+    // }
+    // function showJobDetails15() {
+    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox15');
+    //     jobDetailsBox3.style.display = 'block';
+    //     jobDetailsBox3.style.overflowY = 'auto';
+    // }
 
-    function closeJobDetails15() {
-        var jobDetailsBox3= document.getElementById('jobDetailsBox15');
-        jobDetailsBox3.style.display = 'none';
-    }
-    function showJobDetails16() {
-        var jobDetailsBox3 = document.getElementById('jobDetailsBox16');
-        jobDetailsBox3.style.display = 'block';
-        jobDetailsBox3.style.overflowY = 'auto';
-    }
+    // function closeJobDetails15() {
+    //     var jobDetailsBox3= document.getElementById('jobDetailsBox15');
+    //     jobDetailsBox3.style.display = 'none';
+    // }
+    // function showJobDetails16() {
+    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox16');
+    //     jobDetailsBox3.style.display = 'block';
+    //     jobDetailsBox3.style.overflowY = 'auto';
+    // }
 
-    function closeJobDetails16() {
-        var jobDetailsBox3= document.getElementById('jobDetailsBox16');
-        jobDetailsBox3.style.display = 'none';
-    }
-    function showJobDetails17() {
-        var jobDetailsBox3 = document.getElementById('jobDetailsBox17');
-        jobDetailsBox3.style.display = 'block';
-        jobDetailsBox3.style.overflowY = 'auto';
-    }
+    // function closeJobDetails16() {
+    //     var jobDetailsBox3= document.getElementById('jobDetailsBox16');
+    //     jobDetailsBox3.style.display = 'none';
+    // }
+    // function showJobDetails17() {
+    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox17');
+    //     jobDetailsBox3.style.display = 'block';
+    //     jobDetailsBox3.style.overflowY = 'auto';
+    // }
 
-    function closeJobDetails17() {
-        var jobDetailsBox3= document.getElementById('jobDetailsBox17');
-        jobDetailsBox3.style.display = 'none';
-    }
-    function showJobDetails18() {
-        var jobDetailsBox3 = document.getElementById('jobDetailsBox18');
-        jobDetailsBox3.style.display = 'block';
-        jobDetailsBox3.style.overflowY = 'auto';
-    }
+    // function closeJobDetails17() {
+    //     var jobDetailsBox3= document.getElementById('jobDetailsBox17');
+    //     jobDetailsBox3.style.display = 'none';
+    // }
+    // function showJobDetails18() {
+    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox18');
+    //     jobDetailsBox3.style.display = 'block';
+    //     jobDetailsBox3.style.overflowY = 'auto';
+    // }
 
-    function closeJobDetails18() {
-        var jobDetailsBox3= document.getElementById('jobDetailsBox18');
-        jobDetailsBox3.style.display = 'none';
-    }
-    function showJobDetails19() {
-        var jobDetailsBox3 = document.getElementById('jobDetailsBox19');
-        jobDetailsBox3.style.display = 'block';
-        jobDetailsBox3.style.overflowY = 'auto';
-    }
+    // function closeJobDetails18() {
+    //     var jobDetailsBox3= document.getElementById('jobDetailsBox18');
+    //     jobDetailsBox3.style.display = 'none';
+    // }
+    // function showJobDetails19() {
+    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox19');
+    //     jobDetailsBox3.style.display = 'block';
+    //     jobDetailsBox3.style.overflowY = 'auto';
+    // }
 
-    function closeJobDetails19() {
-        var jobDetailsBox3= document.getElementById('jobDetailsBox19');
-        jobDetailsBox3.style.display = 'none';
-    }
-    function showJobDetails20() {
-        var jobDetailsBox3 = document.getElementById('jobDetailsBox20');
-        jobDetailsBox3.style.display = 'block';
-        jobDetailsBox3.style.overflowY = 'auto';
-    }
+    // function closeJobDetails19() {
+    //     var jobDetailsBox3= document.getElementById('jobDetailsBox19');
+    //     jobDetailsBox3.style.display = 'none';
+    // }
+    // function showJobDetails20() {
+    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox20');
+    //     jobDetailsBox3.style.display = 'block';
+    //     jobDetailsBox3.style.overflowY = 'auto';
+    // }
 
-    function closeJobDetails20() {
-        var jobDetailsBox3= document.getElementById('jobDetailsBox20');
-        jobDetailsBox3.style.display = 'none';
-    }
-    function showJobDetails21() {
-        var jobDetailsBox3 = document.getElementById('jobDetailsBox21');
-        jobDetailsBox3.style.display = 'block';
-        jobDetailsBox3.style.overflowY = 'auto';
-    }
+    // function closeJobDetails20() {
+    //     var jobDetailsBox3= document.getElementById('jobDetailsBox20');
+    //     jobDetailsBox3.style.display = 'none';
+    // }
+    // function showJobDetails21() {
+    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox21');
+    //     jobDetailsBox3.style.display = 'block';
+    //     jobDetailsBox3.style.overflowY = 'auto';
+    // }
 
-    function closeJobDetails21() {
-        var jobDetailsBox3= document.getElementById('jobDetailsBox21');
-        jobDetailsBox3.style.display = 'none';
-    }
-    function showJobDetails22() {
-        var jobDetailsBox3 = document.getElementById('jobDetailsBox22');
-        jobDetailsBox3.style.display = 'block';
-        jobDetailsBox3.style.overflowY = 'auto';
-    }
-    function closeJobDetails22() {
-        var jobDetailsBox3= document.getElementById('jobDetailsBox22');
-        jobDetailsBox3.style.display = 'none';
-    }
-    function closeJobDetails23() {
-        var jobDetailsBox3= document.getElementById('jobDetailsBox23');
-        jobDetailsBox3.style.display = 'none';
-    }
-    function showJobDetails23() {
-        var jobDetailsBox3 = document.getElementById('jobDetailsBox23');
-        jobDetailsBox3.style.display = 'block';
-        jobDetailsBox3.style.overflowY = 'auto';
-    }
+    // function closeJobDetails21() {
+    //     var jobDetailsBox3= document.getElementById('jobDetailsBox21');
+    //     jobDetailsBox3.style.display = 'none';
+    // }
+    // function showJobDetails22() {
+    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox22');
+    //     jobDetailsBox3.style.display = 'block';
+    //     jobDetailsBox3.style.overflowY = 'auto';
+    // }
+    // function closeJobDetails22() {
+    //     var jobDetailsBox3= document.getElementById('jobDetailsBox22');
+    //     jobDetailsBox3.style.display = 'none';
+    // }
+    // function closeJobDetails23() {
+    //     var jobDetailsBox3= document.getElementById('jobDetailsBox23');
+    //     jobDetailsBox3.style.display = 'none';
+    // }
+    // function showJobDetails23() {
+    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox23');
+    //     jobDetailsBox3.style.display = 'block';
+    //     jobDetailsBox3.style.overflowY = 'auto';
+    // }
 
-    function closeJobDetails24() {
-        var jobDetailsBox3= document.getElementById('jobDetailsBox24');
-        jobDetailsBox3.style.display = 'none';
-    }
-    function showJobDetails24() {
-        var jobDetailsBox3 = document.getElementById('jobDetailsBox24');
-        jobDetailsBox3.style.display = 'block';
-        jobDetailsBox3.style.overflowY = 'auto';
-    }
+    // function closeJobDetails24() {
+    //     var jobDetailsBox3= document.getElementById('jobDetailsBox24');
+    //     jobDetailsBox3.style.display = 'none';
+    // }
+    // function showJobDetails24() {
+    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox24');
+    //     jobDetailsBox3.style.display = 'block';
+    //     jobDetailsBox3.style.overflowY = 'auto';
+    // }
 
 
     function openApplyForm() {
