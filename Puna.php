@@ -1,6 +1,7 @@
 <?php
 class Puna{
     private $ID; //e kemi shtu Id direkt ne db me AutoIncrement
+    private $Img;
     private $JobTitle;
     private $Orari;
     private $Lokacioni;
@@ -8,7 +9,8 @@ class Puna{
     private $PozitaTeHapura;
    
 
-    public function __construct($e, $m, $em, $d, $gj){
+    public function __construct($i,$e, $m, $em, $d, $gj){
+        $this->Img=$img;
         $this->JobTitle=$e;
         $this->Orari=$m;
         $this->Lokacioni=$em;
@@ -16,7 +18,12 @@ class Puna{
         $this->PozitaTeHapura=$gj;
     
     }
-    
+    public function getImg(){
+        return $this->Img;
+    }
+    public function setImg($e){
+        $this->Img = $e;
+    }
     public function getJobTitle(){
         return $this->JobTitle;
     }

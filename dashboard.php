@@ -19,6 +19,7 @@ $puna = $jbrep->getAllJobs();
         <table>
             <thead>
             <tr>
+            <th>Img</th>
                 <th>JobTitle</th>
                 <th>Orari</th>
                 <th>Lokacioni</th>
@@ -29,6 +30,7 @@ $puna = $jbrep->getAllJobs();
             <tbody>
                 <?php foreach($puna as $job) { ?> <!--e hapim foreach-->
                     <tr>
+                    <td><?php echo $job['Img'];?></td>
                         <td><?php echo $job['JobTitle'];?></td>
                         <td><?php echo $job['Orari'];?></td>
                         <td><?php echo $job['Lokacioni'];?></td>

@@ -194,30 +194,27 @@ $puna = $jbrep->getAllJobs();
                 <a href="#" class="details-btn" onclick="showJobDetails7()">Learn More</a>
                 <span class="open-positions">3 open positions</span>
         </div>
-        <table>
-            <thead>
-            <tr>
-                <th>JobTitle</th>
-                <th>Orari</th>
-                <th>Lokacioni</th>
-                <th>Detajet</th>
-                <th>PozitaTeHapura</th>
-            </tr>
-            </thead>
-            <tbody>
-                <?php foreach($puna as $job) { ?> <!--e hapim foreach-->
-                    <tr>
-                        <td><?php echo $job['JobTitle'];?></td>
-                        <td><?php echo $job['Orari'];?></td>
-                        <td><?php echo $job['Lokacioni'];?></td>
-                        <td><?php echo $job['Detajet'];?></td>
-                        <td><?php echo $job['PozitaTeHapura'];?></td>
-                        
-                    </tr>
-                <?php }?> 
-            </tbody>
-        </table>
-        
+    
+         
+        <?php foreach ($puna as $job) { ?>
+    <div class="puna">
+        <img src="<?php echo $job['Img']; ?>" alt="" style="width: 70px; height: auto;">
+        <h3 class="job-title"><?php echo $job['JobTitle']; ?></h3>
+        <div class="kryesor">
+            <div class="foto-fulltime">
+                <img src="ora.png" alt="" style="width: 20px; height: auto;">
+                <div class="time"><?php echo $job['Orari']; ?></div>
+            </div>
+            <div class="foto-lokacion">
+                <img src="lokacioni.png" alt="" style="width: 20px; height: auto;">
+                <div class="lokacion"><?php echo $job['Lokacioni']; ?></div>
+            </div>
+        </div>
+        <div class="details"><?php echo $job['Detajet']; ?></div>
+        <a href="#" class="details-btn" onclick="showJobDetails7()">Learn More</a>
+        <span class="open-positions"><?php echo $job['PozitaTeHapura']; ?> open positions</span>
+    </div>
+<?php } ?>
         <!-- <div class="puna">
             <img src="embedded-system-icon-set-four-elements-diferent-styles-industry-icons-collection-creative-filled-outline-colored-flat-161602401.webp" alt="" style="width: 70px; height: auto;">
             <h3 class="job-title">Embedded Systems Engineer</h3>

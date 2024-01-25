@@ -44,9 +44,11 @@ $puna = $jbrep->getJobById($id);
     
     <h3>Edit Puna</h3>
 
-    <form action="<?php echo $_SERVER['PHP_SELF'] . '?id=' . $id; ?>" method="post">
+    <form action="<?php echo $_SERVER['PHP_SELF'] . '?id=' . $id; ?>" method="POST">
      <!-- nese nuk duam t'i ndryshojme te gjitha te dhenat, e perdorim kete pjesen tek value qe te na shfaqen vlerat aktuale, ashtu qe atributet qe nuk duam t'i ndryshojme mbesin te njejta pa pasur nevoje t'i shkruajme prape-->
-        <label>Job Title:</label>
+     <label>Img:</label>
+        <input type="file" name="img"  value="<?php echo $puna['Img']?>"> <br> <br>
+     <label>Job Title:</label>
         <input type="text" name="jobTitle"  value="<?php echo $puna['JobTitle']?>"> <br> <br> <!-- Pjesa brenda [] eshte emri i sakte i atributit si ne Databaze-->
         <label>Orari:</label>
         <input type="text" name="orari"  value="<?php echo $puna['Orari']?>"> <br> <br>
@@ -62,16 +64,16 @@ $puna = $jbrep->getJobById($id);
 </html>
 
 <?php 
-
 if(isset($_POST['editBtn'])){
     $id = $id; 
+    $img= $_POST['img'];
     $jobTitle = $_POST['jobTitle'];
     $orari = $_POST['orari'];
     $lokacioni = $_POST['lokacioni'];
     $detajet = $_POST['detajet'];
     $pozitaTeHapura = $_POST['pozitaTeHapura'];
 
-    $jbrep->editJob($id, $jobTitle, $orari, $lokacioni, $detajet, $pozitaTeHapura);
+    $jbrep->editJob($id, $img, $jobTitle, $orari, $lokacioni, $detajet, $pozitaTeHapura);
     header("location:dashboard.php");
     exit();
 }

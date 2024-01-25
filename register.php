@@ -3,13 +3,14 @@ include_once ('Puna.php');
 include_once ('PunaRepository.php');
 
 if (isset($_POST['submitbtn'])) {
+    $img = $_POST['img'];
     $jobTitle = $_POST['jobTitle'];
     $orari = $_POST['orari'];
     $lokacioni = $_POST['lokacioni'];
     $detajet = $_POST['detajet'];
     $pozitaTeHapura = $_POST['pozitaTeHapura'];
    
-    $puna = new Puna($jobTitle, $orari, $lokacioni,$detajet, $pozitaTeHapura);
+    $puna = new Puna($img,$jobTitle, $orari, $lokacioni,$detajet, $pozitaTeHapura);
 
     $punaRepository = new PunaRepository();
     $punaRepository->insertPuna($puna);
@@ -91,6 +92,8 @@ if (isset($_POST['submitbtn'])) {
         <h1>Register</h1>
       
 <form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
+<label>Img:</label>
+        <input type="file" name="img"> <br>
             <label>Job Title:</label> 
             <input type="text" name="jobTitle" ><br>
             <label>Orari:</label>
