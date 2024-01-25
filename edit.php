@@ -47,6 +47,8 @@ $puna = $jbrep->getJobById($id);
     <form action="<?php echo $_SERVER['PHP_SELF'] . '?id=' . $id; ?>" method="POST">
      <!-- nese nuk duam t'i ndryshojme te gjitha te dhenat, e perdorim kete pjesen tek value qe te na shfaqen vlerat aktuale, ashtu qe atributet qe nuk duam t'i ndryshojme mbesin te njejta pa pasur nevoje t'i shkruajme prape-->
      <label>Img:</label>
+        <input type="file" name="img"  value="<?php echo $puna['ID']?>"> <br> <br>
+     <label>Img:</label>
         <input type="file" name="img"  value="<?php echo $puna['Img']?>"> <br> <br>
      <label>Job Title:</label>
         <input type="text" name="jobTitle"  value="<?php echo $puna['JobTitle']?>"> <br> <br> <!-- Pjesa brenda [] eshte emri i sakte i atributit si ne Databaze-->

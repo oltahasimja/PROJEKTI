@@ -21,6 +21,7 @@ $comment = $cmrep->getAllComments();
         <table>
             <thead>
             <tr>
+            <th>ID</th>
             <th>Img</th>
                 <th>JobTitle</th>
                 <th>Orari</th>
@@ -33,6 +34,7 @@ $comment = $cmrep->getAllComments();
             <tbody>
                 <?php foreach($puna as $job) { ?> <!--e hapim foreach-->
                     <tr>
+                    <td><?php echo $job['ID'];?></td>
                     <td><?php echo $job['Img'];?></td>
                         <td><?php echo $job['JobTitle'];?></td>
                         <td><?php echo $job['Orari'];?></td>
