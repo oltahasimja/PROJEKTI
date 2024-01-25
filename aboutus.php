@@ -151,7 +151,7 @@
     <div class="team">
         <div class="meet">
             <p id="meetourteam">Meet our team</p>
-            <a href="loginform.html" class="join"><h2>Join Us</h2></a>
+            <a href="loginform.php" class="join"><h2>Join Us</h2></a>
         </div>
         <div>
             <img src="team.jpg" alt="" id="foto-team">

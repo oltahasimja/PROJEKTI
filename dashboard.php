@@ -2,9 +2,11 @@
 
 include "DatabaseConnection.php";
 include_once "PunaRepository.php";
-
+include "function.php";
 $jbrep = new PunaRepository();
 $puna = $jbrep->getAllJobs();
+$cmrep = new Contact();
+$comment = $cmrep->getAllComments();
 
 ?>
 
@@ -38,6 +40,33 @@ $puna = $jbrep->getAllJobs();
                         <td><?php echo $job['PozitaTeHapura'];?></td>
                         <td><a href='edit.php?id=<?php echo $job['ID']?>'>Edit</a></td> <!--e dergojme id ne url permes pjeses ?id= dhe permes kodit ne php e marrim nga jobi i cili eshte i paraqitur ne kete rresht-->
                         <td><a href='delete.php?id=<?php echo $job['ID']?>'>Delete</a></td>
+                    </tr>
+                <?php }?> 
+            </tbody>
+        </table>
+
+
+        <table>
+            <thead>
+            <tr>
+            <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Comment</th>
+           
+            </tr>
+            </thead>
+            <tbody>
+                <?php foreach($comment as $msg) { ?> <!--e hapim foreach-->
+                    <tr>
+                    <td><?php echo $msg['first_name'];?></td>
+                        <td><?php echo $msg['last_name'];?></td>
+                        <td><?php echo $msg['email'];?></td>
+                        <td><?php echo $msg['phone'];?></td>
+                        <td><?php echo $msg['comments'];?></td>
+                     
+                       
                     </tr>
                 <?php }?> 
             </tbody>
