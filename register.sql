@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 25, 2024 at 01:55 PM
+-- Generation Time: Jan 25, 2024 at 02:18 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.9
 
@@ -34,6 +34,13 @@ CREATE TABLE `contact_us` (
   `phone` varchar(255) NOT NULL,
   `comments` varchar(5000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `contact_us`
+--
+
+INSERT INTO `contact_us` (`first_name`, `last_name`, `email`, `phone`, `comments`) VALUES
+('Elita', 'Hajrizi', 'elita.hajrizi@ubt-uni.net', '049654456', 'Kerkoje te me ktheni pergjigje ne lidhje me punen qe kam aplikuar.');
 
 -- --------------------------------------------------------
 
