@@ -14,7 +14,7 @@ if (isset($_POST['submitbtn'])) {
     $punaRepository = new PunaRepository();
     $punaRepository->insertPuna($puna);
   
-    header("location:dashboard.php");
+    header("location:jobopenings.php");
     exit();
 }
 ?>

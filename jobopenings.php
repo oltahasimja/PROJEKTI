@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +9,9 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="jobopenings.css">
+    <link rel="stylesheet" href="dashboard.css">
+<link rel="stylesheet" href="stylecover.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;1,6..12,200&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
@@ -33,6 +37,17 @@
                      <a href='dashboard.php'>Dashboard</a>
                  </button>";
          }
+
+         
+include "DatabaseConnection.php";
+include_once "PunaRepository.php";
+
+$jbrep = new PunaRepository();
+$puna = $jbrep->getAllJobs();
+
+?>
+         <?php 
+
     ?>
 
     <div class="punet">
@@ -181,7 +196,34 @@
             <div class="details">Strategic HR Planning; Employee Relations and Engagement; Talent Management and Development</div>
                 <a href="#" class="details-btn" onclick="showJobDetails7()">Learn More</a>
                 <span class="open-positions">3 open positions</span>
-        </div><!-- <div class="puna">
+        </div>
+        <a href='register.php'>Register</a>
+        <table>
+            <thead>
+            <tr>
+                <th>JobTitle</th>
+                <th>Orari</th>
+                <th>Lokacioni</th>
+                <th>Detajet</th>
+                <th>PozitaTeHapura</th>
+            </tr>
+            </thead>
+            <tbody>
+                <?php foreach($puna as $job) { ?> <!--e hapim foreach-->
+                    <tr>
+                        <td><?php echo $job['JobTitle'];?></td>
+                        <td><?php echo $job['Orari'];?></td>
+                        <td><?php echo $job['Lokacioni'];?></td>
+                        <td><?php echo $job['Detajet'];?></td>
+                        <td><?php echo $job['PozitaTeHapura'];?></td>
+                        <td><a href='edit.php?id=<?php echo $job['ID']?>'>Edit</a></td> <!--e dergojme id ne url permes pjeses ?id= dhe permes kodit ne php e marrim nga jobi i cili eshte i paraqitur ne kete rresht-->
+                        <td><a href='delete.php?id=<?php echo $job['ID']?>'>Delete</a></td>
+                    </tr>
+                <?php }?> 
+            </tbody>
+        </table>
+        
+        <!-- <div class="puna">
             <img src="embedded-system-icon-set-four-elements-diferent-styles-industry-icons-collection-creative-filled-outline-colored-flat-161602401.webp" alt="" style="width: 70px; height: auto;">
             <h3 class="job-title">Embedded Systems Engineer</h3>
             <div class="kryesor">
