@@ -28,11 +28,11 @@
             $lokacioni = $job->getLokacioni();
             $detajet = $job->getDetajet();
             $pozitaTeHapura=$job->getPozitaTeHapura();
-
-            $sql = "INSERT INTO job(Img,JobTitle,Orari, Lokacioni,Detajet,PozitaTeHapura) VALUES (?,?,?,?,?,?)";
+            $pershkrimi = $job->getPershkrimi();
+            $sql = "INSERT INTO job(Img,JobTitle,Orari, Lokacioni,Detajet,PozitaTeHapura,Pershkrimi) VALUES (?,?,?,?,?,?,?)";
 
             $statement = $conn->prepare($sql);
-            $statement->execute([   $img, $jobTitle,  $orari,  $lokacioni, $detajet,$pozitaTeHapura]);
+            $statement->execute([   $img, $jobTitle,  $orari,  $lokacioni, $detajet,$pozitaTeHapura,$pershkrimi]);
 
             echo "<script>alert('U shtua me sukses!')</script>";
         }
@@ -50,12 +50,12 @@
 
         //Pjesa tjeter e funksioneve CRUD: update 
         //dergohet parametri ne baze te cilit e identifikojme jobn (ne kete rast id, por mund te jete edhe ndonje atribut tjeter) dhe parametrat e tjere qe mund t'i ndryshojme (emri, mbiemri, etj...)
-        public function editJob($id, $img, $jobTitle, $orari, $lokacioni,  $detajet , $pozitaTeHapura){
+        public function editJob($id, $img, $jobTitle, $orari, $lokacioni,  $detajet , $pozitaTeHapura,$pershkrimi){
             $conn = $this->connection;
-            $sql = "UPDATE job SET Img=?, JobTitle=?,Orari=?, Lokacioni=?, Detajet=?,PozitaTeHapura=? WHERE ID=?";
+            $sql = "UPDATE job SET Img=?, JobTitle=?,Orari=?, Lokacioni=?, Detajet=?,PozitaTeHapura=? ,Pershkrimi=? WHERE ID=?";
 
             $statement = $conn->prepare($sql);
-            $statement->execute([ $img, $jobTitle, $orari, $lokacioni,  $detajet , $pozitaTeHapura, $id]);
+            $statement->execute([ $img, $jobTitle, $orari, $lokacioni,  $detajet , $pozitaTeHapura, $pershkrimi,$id]);
 
             echo "<script>alert('U ndryshua me sukses!')</script>";
 

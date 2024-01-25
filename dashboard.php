@@ -27,6 +27,7 @@ $comment = $cmrep->getAllComments();
                 <th>Lokacioni</th>
                 <th>Detajet</th>
                 <th>PozitaTeHapura</th>
+                <th>Pershkrimi</th>
             </tr>
             </thead>
             <tbody>
@@ -38,6 +39,7 @@ $comment = $cmrep->getAllComments();
                         <td><?php echo $job['Lokacioni'];?></td>
                         <td><?php echo $job['Detajet'];?></td>
                         <td><?php echo $job['PozitaTeHapura'];?></td>
+                        <td><?php echo $job['Pershkrimi'];?></td>
                         <td><a href='edit.php?id=<?php echo $job['ID']?>'>Edit</a></td> <!--e dergojme id ne url permes pjeses ?id= dhe permes kodit ne php e marrim nga jobi i cili eshte i paraqitur ne kete rresht-->
                         <td><a href='delete.php?id=<?php echo $job['ID']?>'>Delete</a></td>
                     </tr>

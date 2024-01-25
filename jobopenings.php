@@ -176,24 +176,7 @@ $puna = $jbrep->getAllJobs();
             <div class="details">Infrastructure Automation; Monitoring and Incident Response; Continuous Integration/Deployment (CI/CD)</div>
                 <a href="#" class="details-btn" onclick="showJobDetails6()">Learn More</a>
                 <span class="open-positions">3 open positions</span>
-         </div> <div class="puna">
-            <img src="human.jpg" alt="" style="width: 70px; height: auto;">
-            <h3 class="job-title">Human Resources Business Partner</h3>
-            <div class="kryesor">
-                <div class="foto-fulltime"> 
-                     <img src="ora.png" alt="" style="width: 20px; height: auto;">
-                    <div class="time">Full time</div>
-                    </div>
-              
-                     <div class="foto-lokacion" >
-                      <img src="lokacioni.png" alt="" style="width: 20px; height: auto;">
-                         <div class="lokacion">London</div>
-                          </div>
-              </div>
-            <div class="details">Strategic HR Planning; Employee Relations and Engagement; Talent Management and Development</div>
-                <a href="#" class="details-btn" onclick="showJobDetails7()">Learn More</a>
-                <span class="open-positions">3 open positions</span>
-        </div>
+         </div> 
     
          
         <?php foreach ($puna as $job) { ?>
@@ -211,10 +194,41 @@ $puna = $jbrep->getAllJobs();
             </div>
         </div>
         <div class="details"><?php echo $job['Detajet']; ?></div>
-        <a href="#" class="details-btn" onclick="showJobDetails7()">Learn More</a>
+        <a href="#" class="details-btn" onclick="showJobDetails(<?php echo $job['ID']; ?>)">Learn More</a>
         <span class="open-positions"><?php echo $job['PozitaTeHapura']; ?> open positions</span>
     </div>
-<?php } ?>
+<?php } ?>  
+
+<?php foreach ($puna as $job) { ?>
+    <div id="jobDetailsBox<?php echo $job['ID']; ?>" class="job-details-box">
+        <?php echo $job['Pershkrimi']; ?>
+        <br>
+        <div id="applyForm">
+            <h3 style="color: white; display: flex; justify-content: center;">Add your CV</h3>
+            <br>
+            <form onsubmit="return validateApplyForm('cv<?php echo $job['ID']; ?>', <?php echo $job['ID']; ?>)">
+                <label for="cv<?php echo $job['ID']; ?>" style="color: white; margin-left: 2.5em;">Upload your CV:   </label>
+                <input type="file" id="cv<?php echo $job['ID']; ?>" name="cv" accept=".pdf, .doc, .docx" style="margin-left: 1em;">
+                <br>
+                <button type="submit" id="butoniApply"><b>Apply</b></button>
+            </form>
+        </div>
+        <a href="#" class="close-btn" onclick="closeJobDetails(<?php echo $job['ID']; ?>)">Close</a>
+    </div>
+<?php } ?>  
+
+<script>
+    function showJobDetails(jobId) {
+        var jobDetailsBox = document.getElementById('jobDetailsBox' + jobId);
+        jobDetailsBox.style.display = 'block';
+        jobDetailsBox.style.overflowY = 'auto';
+    }
+
+    function closeJobDetails(jobId) {
+        var jobDetailsBox = document.getElementById('jobDetailsBox' + jobId);
+        jobDetailsBox.style.display = 'none';
+    }
+</script>
         <!-- <div class="puna">
             <img src="embedded-system-icon-set-four-elements-diferent-styles-industry-icons-collection-creative-filled-outline-colored-flat-161602401.webp" alt="" style="width: 70px; height: auto;">
             <h3 class="job-title">Embedded Systems Engineer</h3>
@@ -954,65 +968,8 @@ Within 1 month, you will:
     
        <a href="#" class="close-btn" onclick="closeJobDetails6()">Close</a>
     </div>
-        
-        <div id="jobDetailsBox7" class="job-details-box">
-            <h3>The Opportunity: Strategic HR Leadership Role</h3>
-            <p>
-                Job Opportunity: Human Resources Business Partner
-                
-                We are seeking a dynamic and strategic Human Resources Business Partner to join our team. As an HR Business Partner, you will play a pivotal role in aligning human resources strategies with business objectives. This is a leadership position where you will collaborate with business leaders to drive HR initiatives, foster a positive workplace culture, and contribute to the overall success of our organization. If you are passionate about people, organizational development, and driving HR excellence, we want to hear from you.
-            </p>
-            <br>
-            <h3>A Day in the Life:</h3>
-            <ul id="req">
-                <li>Collaborate with business leaders to understand organizational goals and develop HR strategies that support them.</li>
-                <li>Provide strategic guidance on talent acquisition, employee relations, performance management, and workforce planning.</li>
-                <li>Lead initiatives to enhance employee engagement, retention, and professional development.</li>
-                <li>Partner with management to address employee relations issues and ensure a positive and inclusive workplace environment.</li>
-                <li>Conduct regular assessments of organizational and departmental needs to inform HR programs and policies.</li>
-                <li>Serve as a key point of contact for employees, providing guidance on HR policies, benefits, and career development.</li>
-                <li>Manage individual and team priorities, deadlines, and deliverables within the HR domain.</li>
-            </ul>
-            <br>
-            <h3>Role Progression:</h3>
-            <p>Within 1 month, you will:</p>
-            <ul id="req">
-                <li>Complete the onboarding program, gaining insights into our organizational structure, culture, and business objectives.</li>
-                <li>Familiarize yourself with our specific HR policies, programs, and ongoing projects.</li>
-            </ul>
-            <p>Within 6 months, you will:</p>
-            <ul id="req">
-                <li>Lead HR initiatives, demonstrating a deep understanding of HR principles and best practices.</li>
-                <li>Successfully partner with business leaders to implement HR strategies that positively impact the organization.</li>
-                <li>Contribute to the development and implementation of HR policies and programs.</li>
-                <li>Provide mentorship and assistance to HR team members, fostering a collaborative and growth-oriented team culture.</li>
-            </ul>
-            <br>
-            <h3>Requirements About You:</h3>
-            <ul id="req">
-                <li>8+ years of experience in human resources, with a focus on strategic HR business partnering.</li>
-                <li>Demonstrated leadership experience in aligning HR strategies with organizational goals.</li>
-                <li>Strong understanding of talent acquisition, employee relations, performance management, and workforce planning.</li>
-                <li>Excellent communication and interpersonal skills, with the ability to build effective relationships at all levels of the organization.</li>
-                <li>Experience with HRIS systems and familiarity with HR compliance and labor laws.</li>
-                <li>Familiarity with agile methodologies and project management tools.</li>
-                <li>Excellent problem-solving skills and the ability to work independently or collaboratively.</li>
-            </ul>
-            
-    <br>
-        <div id="applyForm">
-            <h3 style="color: white; display: flex; justify-content: center;">Add your CV</h3>
-            <br>
-            <form onsubmit="return validateApplyForm('cv8', 8)">
-                <label for="cv" style="color: white; margin-left: 2.5em;">Upload your CV:   </label>
-                <input type="file" id="cv8" name="cv" accept=".pdf, .doc, .docx" style="margin-left: 1em;">
-                <br>
-                <button type="submit" id="butoniApply"><b>Apply</b></button>
-            </form>
-        </div>
-    
-       <a href="#" class="close-btn" onclick="closeJobDetails7()">Close</a>
-    </div>
+ 
+
     <!-- <div id="jobDetailsBox8" class="job-details-box">
         <h3>The Opportunity: Embedded Systems Engineer</h3>
         <p>
@@ -2169,195 +2126,7 @@ Within 1 month, you will:
         var jobDetailsBox3= document.getElementById('jobDetailsBox6');
         jobDetailsBox3.style.display = 'none';
     }
-    function showJobDetails7() {
-        var jobDetailsBox3 = document.getElementById('jobDetailsBox7');
-        jobDetailsBox3.style.display = 'block';
-        jobDetailsBox3.style.overflowY = 'auto';
-    }
-
-    function closeJobDetails7() {
-        var jobDetailsBox3= document.getElementById('jobDetailsBox7');
-        jobDetailsBox3.style.display = 'none';
-    }
-    // function showJobDetails8() {
-    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox8');
-    //     jobDetailsBox3.style.display = 'block';
-    //     jobDetailsBox3.style.overflowY = 'auto';
-    // }
-
-    // function closeJobDetails8() {
-    //     var jobDetailsBox3= document.getElementById('jobDetailsBox8');
-    //     jobDetailsBox3.style.display = 'none';
-    // }
-    // function showJobDetails9() {
-    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox9');
-    //     jobDetailsBox3.style.display = 'block';
-    //     jobDetailsBox3.style.overflowY = 'auto';
-    // }
-
-    // function closeJobDetails9() {
-    //     var jobDetailsBox3= document.getElementById('jobDetailsBox9');
-    //     jobDetailsBox3.style.display = 'none';
-    // }
-    // function showJobDetails10() {
-    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox10');
-    //     jobDetailsBox3.style.display = 'block';
-    //     jobDetailsBox3.style.overflowY = 'auto';
-    // }
-
-    // function closeJobDetails10() {
-    //     var jobDetailsBox3= document.getElementById('jobDetailsBox10');
-    //     jobDetailsBox3.style.display = 'none';
-    // }
-    // function showJobDetails11() {
-    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox11');
-    //     jobDetailsBox3.style.display = 'block';
-    //     jobDetailsBox3.style.overflowY = 'auto';
-    // }
-
-    // function closeJobDetails11() {
-    //     var jobDetailsBox3= document.getElementById('jobDetailsBox11');
-    //     jobDetailsBox3.style.display = 'none';
-    // }
-    // function showJobDetails12() {
-    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox12');
-    //     jobDetailsBox3.style.display = 'block';
-    //     jobDetailsBox3.style.overflowY = 'auto';
-    // }
-
-    // function closeJobDetails12() {
-    //     var jobDetailsBox3= document.getElementById('jobDetailsBox12');
-    //     jobDetailsBox3.style.display = 'none';
-    // }
-    // function showJobDetails25() {
-    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox25');
-    //     jobDetailsBox3.style.display = 'block';
-    //     jobDetailsBox3.style.overflowY = 'auto';
-    // }
-
-    // function closeJobDetails25() {
-    //     var jobDetailsBox3= document.getElementById('jobDetailsBox25');
-    //     jobDetailsBox3.style.display = 'none';
-    // }
-    // function showJobDetails13() {
-    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox13');
-    //     jobDetailsBox3.style.display = 'block';
-    //     jobDetailsBox3.style.overflowY = 'auto';
-    // }
-
-    // function closeJobDetails13() {
-    //     var jobDetailsBox3= document.getElementById('jobDetailsBox13');
-    //     jobDetailsBox3.style.display = 'none';
-    // }
-    // function showJobDetails14() {
-    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox14');
-    //     jobDetailsBox3.style.display = 'block';
-    //     jobDetailsBox3.style.overflowY = 'auto';
-    // }
-
-    // function closeJobDetails14() {
-    //     var jobDetailsBox3= document.getElementById('jobDetailsBox14');
-    //     jobDetailsBox3.style.display = 'none';
-    // }
-    // function showJobDetails15() {
-    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox15');
-    //     jobDetailsBox3.style.display = 'block';
-    //     jobDetailsBox3.style.overflowY = 'auto';
-    // }
-
-    // function closeJobDetails15() {
-    //     var jobDetailsBox3= document.getElementById('jobDetailsBox15');
-    //     jobDetailsBox3.style.display = 'none';
-    // }
-    // function showJobDetails16() {
-    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox16');
-    //     jobDetailsBox3.style.display = 'block';
-    //     jobDetailsBox3.style.overflowY = 'auto';
-    // }
-
-    // function closeJobDetails16() {
-    //     var jobDetailsBox3= document.getElementById('jobDetailsBox16');
-    //     jobDetailsBox3.style.display = 'none';
-    // }
-    // function showJobDetails17() {
-    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox17');
-    //     jobDetailsBox3.style.display = 'block';
-    //     jobDetailsBox3.style.overflowY = 'auto';
-    // }
-
-    // function closeJobDetails17() {
-    //     var jobDetailsBox3= document.getElementById('jobDetailsBox17');
-    //     jobDetailsBox3.style.display = 'none';
-    // }
-    // function showJobDetails18() {
-    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox18');
-    //     jobDetailsBox3.style.display = 'block';
-    //     jobDetailsBox3.style.overflowY = 'auto';
-    // }
-
-    // function closeJobDetails18() {
-    //     var jobDetailsBox3= document.getElementById('jobDetailsBox18');
-    //     jobDetailsBox3.style.display = 'none';
-    // }
-    // function showJobDetails19() {
-    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox19');
-    //     jobDetailsBox3.style.display = 'block';
-    //     jobDetailsBox3.style.overflowY = 'auto';
-    // }
-
-    // function closeJobDetails19() {
-    //     var jobDetailsBox3= document.getElementById('jobDetailsBox19');
-    //     jobDetailsBox3.style.display = 'none';
-    // }
-    // function showJobDetails20() {
-    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox20');
-    //     jobDetailsBox3.style.display = 'block';
-    //     jobDetailsBox3.style.overflowY = 'auto';
-    // }
-
-    // function closeJobDetails20() {
-    //     var jobDetailsBox3= document.getElementById('jobDetailsBox20');
-    //     jobDetailsBox3.style.display = 'none';
-    // }
-    // function showJobDetails21() {
-    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox21');
-    //     jobDetailsBox3.style.display = 'block';
-    //     jobDetailsBox3.style.overflowY = 'auto';
-    // }
-
-    // function closeJobDetails21() {
-    //     var jobDetailsBox3= document.getElementById('jobDetailsBox21');
-    //     jobDetailsBox3.style.display = 'none';
-    // }
-    // function showJobDetails22() {
-    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox22');
-    //     jobDetailsBox3.style.display = 'block';
-    //     jobDetailsBox3.style.overflowY = 'auto';
-    // }
-    // function closeJobDetails22() {
-    //     var jobDetailsBox3= document.getElementById('jobDetailsBox22');
-    //     jobDetailsBox3.style.display = 'none';
-    // }
-    // function closeJobDetails23() {
-    //     var jobDetailsBox3= document.getElementById('jobDetailsBox23');
-    //     jobDetailsBox3.style.display = 'none';
-    // }
-    // function showJobDetails23() {
-    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox23');
-    //     jobDetailsBox3.style.display = 'block';
-    //     jobDetailsBox3.style.overflowY = 'auto';
-    // }
-
-    // function closeJobDetails24() {
-    //     var jobDetailsBox3= document.getElementById('jobDetailsBox24');
-    //     jobDetailsBox3.style.display = 'none';
-    // }
-    // function showJobDetails24() {
-    //     var jobDetailsBox3 = document.getElementById('jobDetailsBox24');
-    //     jobDetailsBox3.style.display = 'block';
-    //     jobDetailsBox3.style.overflowY = 'auto';
-    // }
-
+ 
 
     function openApplyForm() {
     var card = document.getElementById("card");

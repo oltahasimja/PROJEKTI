@@ -58,25 +58,27 @@ $puna = $jbrep->getJobById($id);
         <input type="text" name="detajet"  value="<?php echo $puna['Detajet']?>"> <br> <br>
         <label>PozitaTeHapura:</label>
         <input type="text" name="pozitaTeHapura"  value="<?php echo $puna['PozitaTeHapura']?>"> <br> <br>
+        <label>Pershkrimi:</label>
+        <input type="text" name="pershkrimi"  value="<?php echo $puna['Pershkrimi']?>"> <br> <br>
         <input type="submit" name="editBtn" value="Save"> <br> <br>
     </form>
 </body>
 </html>
 
 <?php 
+
 if(isset($_POST['editBtn'])){
     $id = $id; 
-    $img= $_POST['img'];
+    $img = $_POST['img'];
     $jobTitle = $_POST['jobTitle'];
     $orari = $_POST['orari'];
     $lokacioni = $_POST['lokacioni'];
     $detajet = $_POST['detajet'];
     $pozitaTeHapura = $_POST['pozitaTeHapura'];
+    $pershkrimi = $_POST['pershkrimi'];
 
-    $jbrep->editJob($id, $img, $jobTitle, $orari, $lokacioni, $detajet, $pozitaTeHapura);
+    $jbrep->editJob($id, $img, $jobTitle, $orari, $lokacioni, $detajet, $pozitaTeHapura, $pershkrimi);
     header("location:dashboard.php");
     exit();
 }
-$puna = $jbrep->getJobById($id);
-
 ?>

@@ -9,8 +9,8 @@ if (isset($_POST['submitbtn'])) {
     $lokacioni = $_POST['lokacioni'];
     $detajet = $_POST['detajet'];
     $pozitaTeHapura = $_POST['pozitaTeHapura'];
-   
-    $puna = new Puna($img,$jobTitle, $orari, $lokacioni,$detajet, $pozitaTeHapura);
+    $pershkrimi = $_POST['pershkrimi'];
+    $puna = new Puna($img,$jobTitle, $orari, $lokacioni,$detajet, $pozitaTeHapura,$pershkrimi);
 
     $punaRepository = new PunaRepository();
     $punaRepository->insertPuna($puna);
@@ -104,6 +104,8 @@ if (isset($_POST['submitbtn'])) {
             <input type="text" name="detajet" ><br>
             <label>PozitaTeHapura:</label>
             <input type="text" name="pozitaTeHapura" required><br>
+            <label>Pershkrimi:</label>
+            <input type="text" name="pershkrimi" required><br>
             <input type="submit" name="submitbtn" value="Submit">
         </form>
 
