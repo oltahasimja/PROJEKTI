@@ -46,10 +46,7 @@ $jbrep = new PunaRepository();
 $puna = $jbrep->getAllJobs();
 
 ?>
-         <?php 
-
-    ?>
-
+        
     <div class="punet">
         <div class="puna">
             <img src="c.jpg" alt="" style="width: 70px; height: auto;">
@@ -197,7 +194,6 @@ $puna = $jbrep->getAllJobs();
                 <a href="#" class="details-btn" onclick="showJobDetails7()">Learn More</a>
                 <span class="open-positions">3 open positions</span>
         </div>
-        <a href='register.php'>Register</a>
         <table>
             <thead>
             <tr>
@@ -216,8 +212,7 @@ $puna = $jbrep->getAllJobs();
                         <td><?php echo $job['Lokacioni'];?></td>
                         <td><?php echo $job['Detajet'];?></td>
                         <td><?php echo $job['PozitaTeHapura'];?></td>
-                        <td><a href='edit.php?id=<?php echo $job['ID']?>'>Edit</a></td> <!--e dergojme id ne url permes pjeses ?id= dhe permes kodit ne php e marrim nga jobi i cili eshte i paraqitur ne kete rresht-->
-                        <td><a href='delete.php?id=<?php echo $job['ID']?>'>Delete</a></td>
+                        
                     </tr>
                 <?php }?> 
             </tbody>
