@@ -31,12 +31,14 @@
 
     <?php
         session_start();
-
+        if(isset($_SESSION['roli'])){
          if($_SESSION['roli']=="admin"){
              echo"<button>
                      <a href='dashboard.php'>Dashboard</a>
                  </button>";
          }
+        
+        }
 
          
 include "DatabaseConnection.php";
