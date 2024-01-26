@@ -8,6 +8,10 @@ $puna = $jbrep->getAllJobs();
 $cmrep = new Contact();
 $comment = $cmrep->getAllComments();
 
+include_once "teamRepository.php";
+$strep = new TeamRepository();
+$team = $strep->getAllTeam();
+
 ?>
 
 <!DOCTYPE html>
@@ -71,6 +75,32 @@ $comment = $cmrep->getAllComments();
                         <td><?php echo $msg['comments'];?></td>
                      
                        
+                    </tr>
+                <?php }?> 
+            </tbody>
+        </table>
+
+        <a href='registerTeam.php'>Register</a>
+        <table>
+            <thead>
+            <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>JobTitle</th>
+            <th>Description</th>
+            <th>Img</th>
+            </tr>
+            </thead>
+            <tbody>
+                <?php foreach($team as $worker) { ?> <!--e hapim foreach-->
+                    <tr>
+                    <td><?php echo $worker['ID'];?></td>
+                    <td><?php echo $worker['name'];?></td>
+                    <td><?php echo $worker['jobTitle'];?></td>
+                    <td><?php echo $worker['description'];?></td>
+                    <td><?php echo $worker['Img'];?></td>
+                    <td><a href='editTeam.php?id=<?php echo $worker['ID']?>'>Edit</a></td> <!--e dergojme id ne url permes pjeses ?id= dhe permes kodit ne php e marrim nga jobi i cili eshte i paraqitur ne kete rresht-->
+                    <td><a href='deleteTeam.php?id=<?php echo $worker['ID']?>'>Delete</a></td>
                     </tr>
                 <?php }?> 
             </tbody>
