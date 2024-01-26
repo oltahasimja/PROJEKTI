@@ -1,23 +1,21 @@
 <?php
-include_once ('Puna.php');
-include_once ('PunaRepository.php');
+    include_once 'Team_Connect.php';
+    include_once 'teamRepository.php';
 
-if (isset($_POST['submitbtn'])) {
-    $img = $_POST['img'];
-    $jobTitle = $_POST['jobTitle'];
-    $orari = $_POST['orari'];
-    $lokacioni = $_POST['lokacioni'];
-    $detajet = $_POST['detajet'];
-    $pozitaTeHapura = $_POST['pozitaTeHapura'];
-    $pershkrimi = $_POST['pershkrimi'];
-    $puna = new Puna($img,$jobTitle, $orari, $lokacioni,$detajet, $pozitaTeHapura,$pershkrimi);
+    if (isset($_POST['submitbtn'])) {
 
-    $punaRepository = new PunaRepository();
-    $punaRepository->insertPuna($puna);
-  
-    header("location:jobopenings.php");
-    exit();
-}
+        $name = $_POST['name']; //merret nga formulari
+        $jobTitle = $_POST['jobTitle'];
+        $description = $_POST['description'];
+        $img = $_POST['img'];
+
+        $team = new Team_Connect($name, $jobTitle, $description, $img);
+
+        $teamregister= new TeamRepository();
+        $teamregister->insertTeam($team);
+        header("location:dashboard.php");
+        exit();
+    }
 ?>
 
 <!DOCTYPE html>
@@ -94,18 +92,12 @@ if (isset($_POST['submitbtn'])) {
     <form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
             <label>Img:</label>
             <input type="file" name="img"> <br>
+            <label>Name:</label>
+            <input type="text" name="name" ><br>
             <label>Job Title:</label> 
             <input type="text" name="jobTitle" ><br>
-            <label>Orari:</label>
-            <input type="text" name="orari" ><br>
-            <label>Lokacioni:</label>
-            <input type="text" name="lokacioni" ><br>
-            <label>Detajet:</label>
-            <input type="text" name="detajet" ><br>
-            <label>PozitaTeHapura:</label>
-            <input type="text" name="pozitaTeHapura" required><br>
-            <label>Pershkrimi:</label>
-            <input type="text" name="pershkrimi" required><br>
+            <label>Description:</label>
+            <input type="text" name="description" ><br>
             <input type="submit" name="submitbtn" value="Submit">
         </form>
 

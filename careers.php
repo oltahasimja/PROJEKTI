@@ -11,6 +11,23 @@
 <body>
     <?php include 'header.php'; ?>
     <div class="banner2">
+    <?php
+        session_start();
+        if (isset($_SESSION['roli'])) {
+         if($_SESSION['roli']=="admin"){
+             echo"<button>
+                     <a href='dashboard.php'>Dashboard</a>
+                 </button>";
+         }
+        }
+         
+include "DatabaseConnection.php";
+include_once "PunaRepository.php";
+
+$jbrep = new PunaRepository();
+$puna = $jbrep->getAllJobs();
+
+?>
         <div class="title">
             <div id="titull">Meet The Team</div></div>
       
