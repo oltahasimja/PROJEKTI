@@ -12,7 +12,6 @@ $team = $strep->getTeamById($id);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit</title>
-    <link rel="stylesheet" href="edit.css">
 </head>
 <style>
         body {
@@ -92,7 +91,7 @@ $team = $strep->getTeamById($id);
         $name = $_POST['name']; //merret nga formulari
         $jobTitle = $_POST['jobTitle'];
         $description = $_POST['description'];
-        $img = $_POST['Img'];
+        $img = $_POST['img'];
     
         $strep->editTeam($id, $name, $jobTitle, $description, $img);
         header("location:dashboard.php");

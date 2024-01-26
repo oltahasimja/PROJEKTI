@@ -1,3 +1,10 @@
+<?php
+    include "DatabaseConnection.php";
+    include_once "teamRepository.php";
+
+    $te = new TeamRepository();
+    $team = $te->getAllTeam();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,24 +18,7 @@
 <body>
     <?php include 'header.php'; ?>
     <div class="banner2">
-    <?php
-        session_start();
-        if (isset($_SESSION['roli'])) {
-         if($_SESSION['roli']=="admin"){
-             echo"<button>
-                     <a href='dashboard.php'>Dashboard</a>
-                 </button>";
-         }
-        }
-         
-include "DatabaseConnection.php";
-include_once "PunaRepository.php";
-
-$jbrep = new PunaRepository();
-$puna = $jbrep->getAllJobs();
-
-?>
-        <div class="title">
+           <div class="title">
             <div id="titull">Meet The Team</div></div>
       
         <br>
@@ -158,7 +148,7 @@ $puna = $jbrep->getAllJobs();
         <p class="about">In the role of Chief UX/UI Designer, Jordan Williams leads the charge in crafting exceptional user experiences and intuitive interfaces at HireMe Corporation. Responsible for the visual and interactive aspects of the company's products, Jordan oversees the UX and UI design teams, ensuring a seamless and delightful user journey.As a valued member of the management team, Jordan actively contributes to the determination of HireMe Corporation's strategic direction and growth. With a focus on human-centric design, Jordan plays a pivotal role in elevating HireMe Corporation's digital presence and ensuring that user satisfaction remains at the forefront of the company's goals.</p>
     </div>
 </div>
-<div class="card">
+<!-- <div class="card">
     <div class="squarebox"></div>
     <div class="roundbox"></div>
     <div class="img_box"><img src="person4.jpg"></div>
@@ -195,8 +185,8 @@ $puna = $jbrep->getAllJobs();
     </div>
     <p class="about">As the Software Architect, Ethan Reynolds is at the forefront of HireMe Corporation's software design and development initiatives. Responsible for shaping the overall architecture and technical direction, Ethan leads a team of skilled engineers to create scalable and innovative software solutions. His role extends to overseeing software development processes, ensuring code quality, and driving technology innovation within the organization. A key influencer in the company's management team, Ethan actively contributes to strategic decisions and growth initiatives, cementing HireMe Corporation's position as a leader in cutting-edge software development.</p>
 </div>
-</div>
-<div class="card">
+</div> -->
+<!-- <div class="card">
     <div class="squarebox"></div>
     <div class="roundbox"></div>
     <div class="img_box"><img src="person9.png"></div>
@@ -214,9 +204,35 @@ $puna = $jbrep->getAllJobs();
     <p class="about">In the capacity of Software Developer, Sophia Nguyen takes charge of driving the development efforts at HireMe Corporation. Leading a team of skilled programmers, Sophia oversees the design, implementation, and maintenance of high-quality software solutions. As an influential member of the management team, Sophia actively contributes to shaping the strategic direction and growth initiatives of the company. With a strong focus on technological innovation, Sophia plays a crucial role in positioning HireMe Corporation as a leader in cutting-edge programming and software development.</p>
     <br>
 </div>
-</div>
+</div> -->
 
         </div>
+    
+    <div class="card_container">
+        <?php foreach ($team as $worker) { ?>
+        
+            <div class="card">
+                <div class="squarebox"></div>
+                <div class="roundbox"></div>
+                <div class="img_box"><img src="<?php echo $worker['Img']?>"></div>
+            
+
+                <div class="user_content">
+                    <h5 class="name"><?php echo $worker['name']?></h5>
+                    <p class="post"><?php echo $worker['jobTitle']?></p>
+                        <div class="star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star transparent"></i>
+                        </div>
+                    <p class="about"><?php echo $worker['description']?></p>
+                </div>
+            </div>
+    
+        <?php } ?>
+    </div>
     </div>
     <?php include 'footer.php'; ?>
 </body>
