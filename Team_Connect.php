@@ -6,12 +6,14 @@ class Team_connect{
         private $jobTitle;
         private $description;
         private $img;
+        private $Modifikoi;
 
-        public function __construct( $name,$jobTitle,$description,$img){
+        public function __construct( $name,$jobTitle,$description,$img, $m){
             $this->name=$name;
             $this->jobTitle=$jobTitle;
             $this->description=$description;
             $this->img=$img;
+            $this->Modifikoi=$m;
         }
         public function getName(){
             return $this->name;
@@ -36,6 +38,12 @@ class Team_connect{
         }
         public function setImg($img){
             $this->img = $img;
+        }
+        public function getModifikoi(){
+            return $this->Modifikoi;
+        }
+        public function setModifikoi($m){
+            $this->Modifikoi = $m;
         }
       
         public function toString(){

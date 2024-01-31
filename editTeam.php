@@ -1,7 +1,8 @@
 <?php
+session_start();
 include 'teamRepository.php';
 $id = $_GET['id'];//e merr id e studentit prej url
-
+$editedBy = isset($_SESSION['name']) ? "Edited By: " . $_SESSION['name'] : "Edited By: Unknown";
 $strep = new TeamRepository();
 $team = $strep->getTeamById($id);
 ?>
@@ -79,6 +80,8 @@ $team = $strep->getTeamById($id);
         <label>Lokacioni:</label>
         <input type="text" name="description"  value="<?php echo $team['description']?>"> <br> <br>
         <input type="submit" name="editBtn" value="Save"> <br> <br>
+        <input type="hidden" name="modifikoi" value="<?php echo htmlspecialchars($editedBy); ?>">
+
     </form>
 
 
@@ -92,8 +95,9 @@ $team = $strep->getTeamById($id);
         $jobTitle = $_POST['jobTitle'];
         $description = $_POST['description'];
         $img = $_POST['img'];
+        $modifikoi = $_POST['modifikoi'];
     
-        $strep->editTeam($id, $name, $jobTitle, $description, $img);
+        $strep->editTeam($id, $name, $jobTitle, $description, $img, $modifikoi);
         header("location:dashboard.php");
         exit();
     }

@@ -1,6 +1,8 @@
 <?php
+    session_start();
     include_once 'Team_Connect.php';
     include_once 'teamRepository.php';
+    $addedBy = isset($_SESSION['name']) ? "Added By: " . $_SESSION['name'] : "Added By: Unknown";
 
     if (isset($_POST['submitbtn'])) {
 
@@ -8,8 +10,9 @@
         $jobTitle = $_POST['jobTitle'];
         $description = $_POST['description'];
         $img = $_POST['img'];
+        $modifikoi = $_POST['modifikoi'];
 
-        $team = new Team_Connect($name, $jobTitle, $description, $img);
+        $team = new Team_Connect($name, $jobTitle, $description, $img, $modifikoi);
 
         $teamregister= new TeamRepository();
         $teamregister->insertTeam($team);
@@ -98,6 +101,7 @@
             <input type="text" name="jobTitle" ><br>
             <label>Description:</label>
             <input type="text" name="description" ><br>
+            <input type="hidden" name="modifikoi" value="<?php echo htmlspecialchars($addedBy); ?>">
             <input type="submit" name="submitbtn" value="Submit">
         </form>
 

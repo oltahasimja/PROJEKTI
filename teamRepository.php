@@ -18,12 +18,13 @@
             $jobTitle = $team->getJobTitle();
             $description = $team->getDescription();
             $img = $team->getImg();
+            $modifikoi = $team->getModifikoi();
 
 
-            $sql = "INSERT INTO careers (name, jobTitle, description ,Img) VALUES (?,?,?,?)";
+            $sql = "INSERT INTO careers (name, jobTitle, description ,Img, Modifikoi) VALUES (?,?,?,?,?)";
 
             $statement = $conn->prepare($sql);
-            $statement->execute([$name, $jobTitle, $description, $img]);
+            $statement->execute([$name, $jobTitle, $description, $img, $modifikoi]);
 
             echo "<script>alert('U shtua me sukses!')</script>";
         }
@@ -36,13 +37,13 @@
             $team = $statement->fetchAll();
             return $team;
         }
-        public function editTeam($id, $name, $jobTitle, $description, $img){
+        public function editTeam($id, $name, $jobTitle, $description, $img, $modifikoi){
             $conn = $this->connection;
-            $sql = "UPDATE careers SET name=?, jobTitle=?, description=?, Img=?  WHERE ID=?";
+            $sql = "UPDATE careers SET name=?, jobTitle=?, description=?, Img=?, Modifikoi=?  WHERE ID=?";
 
 
             $statement = $conn->prepare($sql);
-            $statement->execute([$name, $jobTitle, $description, $img, $id]);
+            $statement->execute([$name, $jobTitle, $description, $img, $modifikoi, $id]);
             echo "<script>alert('U ndryshua me sukses!')</script>";
 
         }
