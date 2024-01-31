@@ -8,8 +8,9 @@ class Puna{
     private $Detajet;
     private $PozitaTeHapura;
     private $Pershkrimi;
+    private $Modifikoi;
 
-    public function __construct($i,$e, $m, $em, $d, $gj,$p){
+    public function __construct($i,$e, $m, $em, $d, $gj,$p,$mo){
         $this->Img=$i;
         $this->JobTitle=$e;
         $this->Orari=$m;
@@ -17,6 +18,7 @@ class Puna{
         $this->Detajet=$d;
         $this->PozitaTeHapura=$gj;
         $this->Pershkrimi=$p;
+        $this->Modifikoi=$mo;
     }
     public function getImg(){
         return $this->Img;
@@ -65,6 +67,15 @@ class Puna{
     public function setPershkrimi($gj){
         $this->Pershkrimi = $gj;
     }
+
+
+    public function getModifikoi(){
+        return $this->Modifikoi;
+    }
+    public function setModifikoi($gj){
+        $this->Modifikoi = $gj;
+    }
+
 
     public function __toString(){
         return "Puna ".$this->JobTitle." me ".$this->PozitaTeHapura." pozita te hapura";

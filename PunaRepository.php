@@ -29,10 +29,12 @@
             $detajet = $job->getDetajet();
             $pozitaTeHapura=$job->getPozitaTeHapura();
             $pershkrimi = $job->getPershkrimi();
-            $sql = "INSERT INTO job(Img,JobTitle,Orari, Lokacioni,Detajet,PozitaTeHapura,Pershkrimi) VALUES (?,?,?,?,?,?,?)";
+            $modifikoi = $job->getModifikoi();
+
+            $sql = "INSERT INTO job(Img,JobTitle,Orari, Lokacioni,Detajet,PozitaTeHapura,Pershkrimi,Modifikoi) VALUES (?,?,?,?,?,?,?,?)";
 
             $statement = $conn->prepare($sql);
-            $statement->execute([   $img, $jobTitle,  $orari,  $lokacioni, $detajet,$pozitaTeHapura,$pershkrimi]);
+            $statement->execute([   $img, $jobTitle,  $orari,  $lokacioni, $detajet,$pozitaTeHapura,$pershkrimi, $modifikoi]);
 
             echo "<script>alert('U shtua me sukses!')</script>";
         }
@@ -50,12 +52,12 @@
 
         //Pjesa tjeter e funksioneve CRUD: update 
         //dergohet parametri ne baze te cilit e identifikojme jobn (ne kete rast id, por mund te jete edhe ndonje atribut tjeter) dhe parametrat e tjere qe mund t'i ndryshojme (emri, mbiemri, etj...)
-        public function editJob($id, $img, $jobTitle, $orari, $lokacioni,  $detajet , $pozitaTeHapura,$pershkrimi){
+        public function editJob($id, $img, $jobTitle, $orari, $lokacioni,  $detajet , $pozitaTeHapura,$pershkrimi,$modifikoi){
             $conn = $this->connection;
-            $sql = "UPDATE job SET Img=?, JobTitle=?,Orari=?, Lokacioni=?, Detajet=?,PozitaTeHapura=? ,Pershkrimi=? WHERE ID=?";
+            $sql = "UPDATE job SET Img=?, JobTitle=?,Orari=?, Lokacioni=?, Detajet=?,PozitaTeHapura=? ,Pershkrimi=?,Modifikoi=? WHERE ID=?";
 
             $statement = $conn->prepare($sql);
-            $statement->execute([ $img, $jobTitle, $orari, $lokacioni,  $detajet , $pozitaTeHapura, $pershkrimi,$id]);
+            $statement->execute([ $img, $jobTitle, $orari, $lokacioni,  $detajet , $pozitaTeHapura, $pershkrimi,$modifikoi,$id]);
 
             echo "<script>alert('U ndryshua me sukses!')</script>";
 

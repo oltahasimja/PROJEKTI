@@ -12,7 +12,7 @@
    <div class="banner2">
         <div class="blloku1">
 
-        <img src="ndertesa.jpg" alt="">
+        <img src="foto/ndertesa.jpg" alt="">
          
         <div class="texti">
             <p id="ourstorytitle">Our Story</p>
@@ -30,13 +30,13 @@
             <div class="historia">
                 <div class="vitet">
                     <div class="viti-2016">
-                        <img src="2016.png" alt="">
+                        <img src="foto/2016.png" alt="">
                     </div>
                     <div class="viti-2020">
-                        <img src="2020.png" alt="">
+                        <img src="foto/2020.png" alt="">
                     </div>
                     <div class="viti-2023">
-                        <img src="2023.png" alt="">
+                        <img src="foto/2023.png" alt="">
                 </div>
             </div>
         
@@ -79,17 +79,17 @@
                 <h2 >Data Driven</h2>
             
                 <p id="parag1">In today's fast-paced and interconnected world, businesses and institutions rely on data-driven insights to gain a competitive edge and enhance efficiency.</p>
-                <img src="datadriven.png" alt="" class="data">
+                <img src="foto/datadriven.png" alt="" class="data">
             </div>
             <div class="tabela-2">
                 <h2 >Innovation</h2>
                 <p id="parag1">In the realm of business, innovation sparks the development of cutting-edge products and services, driving competitiveness and market growth.</p>
-                <img src="inovacion.png" alt="" class="inovacion">
+                <img src="foto/inovacion.png" alt="" class="inovacion">
             </div>
             <div class="tabela-3">
                 <h2>Creativity</h2>
                 <p id="parag1">It empowers teams to tackle challenges with fresh perspectives, fostering an environment where bold ideas are embraced.</p>
-                <img src="creativity.png" alt="" class="creativity">
+                <img src="foto/creativity.png" alt="" class="creativity">
             </div>
         </div>
         </div>
@@ -102,7 +102,7 @@
             Our team of document experts will ensure that all phases of your HireMe-enabled document workflow runs efficiently and quickly. With a customer retention rate of over 98%, we take pride in supporting our customers in one of two packages: Standard and Premium 
         </p>
         </div>
-        <img src="values.jpg" alt="">
+        <img src="foto/values.jpg" alt="">
      
 
         </div>
@@ -110,40 +110,40 @@
         <div class="services">
     
             <div class="service-1">
-                <img src="checkbox.png" alt="" class="img-div">
+                <img src="foto/checkbox.png" alt="" class="img-div">
                 <p p id="kl">Inserting, re-arranging, removing, or hiding functionality on the Word ribbon</p>
             </div>
             <div class="service-2">
-                <img src="checkbox.png" alt="" class="img-div">
+                <img src="foto/checkbox.png" alt="" class="img-div">
                 <p id="kl">Adding native or customized command buttons, groups, and tabs</p>
             </div>
        
             <div class="service-3">
-                <img src="checkbox.png" alt="" class="img-div">
+                <img src="foto/checkbox.png" alt="" class="img-div">
                 <p id="kl">Hiding native functionality and replacing or supplementing it with equivalent DocXtools functionality</p>
             </div>
             <div class="service-4">
-                <img src="checkbox.png" alt="" class="img-div">
+                <img src="foto/checkbox.png" alt="" class="img-div">
                 <p id="kl">Intermixing custom macros on the Word ribbon</p>
             </div>
        
         
             <div class="service-5">
-                <img src="checkbox.png" alt="" class="img-div">
+                <img src="foto/checkbox.png" alt="" class="img-div">
                 <p id="kl">Inserting non-Microsoft images and icons on the Word ribbon</p>
             </div>
             <div class="service-6">
-                <img src="checkbox.png" alt="" class="img-div">
+                <img src="foto/checkbox.png" alt="" class="img-div">
                 <p id="kl">Editing screen tips and super tips across the Word ribbon</p>
             </div>
        
        
             <div class="service-7">
-                <img src="checkbox.png" alt="" class="img-div">
+                <img src="foto/checkbox.png" alt="" class="img-div">
                 <p id="kl">Replacing Word’s convert to .docx feature with the safe DocXtools .doc to .docx functionality</p>
             </div>
             <div class="service-8">
-                <img src="checkbox.png" alt="" class="img-div">
+                <img src="foto/checkbox.png" alt="" class="img-div">
                 <p id="kl">Hiding native Word functionality that is inappropriate for business users (including the Publish as Blog Post or Save to Web features)</p>
             </div>
         
@@ -154,7 +154,7 @@
             <a href="loginform.php" class="join"><h2>Join Us</h2></a>
         </div>
         <div>
-            <img src="team.jpg" alt="" id="foto-team">
+            <img src="foto/team.jpg" alt="" id="foto-team">
         </div>
         
     </div>

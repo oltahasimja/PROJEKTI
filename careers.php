@@ -24,7 +24,7 @@
         <br>
         <div class="team">
             <div class="nje">
-                <img src="person2.jpg" alt="">
+                <img src="foto/person2.jpg" alt="">
                 <div class="person1-text">
                 <h2 id="h2">David Wilson - CEO</h2>
                 <br>
@@ -66,10 +66,10 @@
                     
                  
                 </div>
-                <img src="person1.jpg" alt="">
+                <img src="foto/person1.jpg" alt="">
             </div>
             <div class="tre">
-                <img src="person3.jpg" alt="">
+                <img src="foto/person3.jpg" alt="">
                 <div class="person2-text">
                 <h2 id="h2">Emily Mitchell - CTO</h2>
                 <br>
@@ -96,7 +96,7 @@
             <div class="card">
                 <div class="squarebox"></div>
                 <div class="roundbox"></div>
-                <div class="img_box"><img src="person5.jpg"></div>
+                <div class="img_box"><img src="foto/person5.jpg"></div>
                 
           
             <div class="user_content">
@@ -115,7 +115,7 @@
         <div class="card">
             <div class="squarebox"></div>
             <div class="roundbox"></div>
-            <div class="img_box"><img src="person7.jpg"></div>
+            <div class="img_box"><img src="foto/person7.jpg"></div>
             
       
         <div class="user_content">
@@ -133,7 +133,7 @@
     <div class="card">
         <div class="squarebox"></div>
         <div class="roundbox"></div>
-        <div class="img_box"><img src="person6.jpg"></div>
+        <div class="img_box"><img src="foto/person6.jpg"></div>
         
   
     <div class="user_content">
@@ -148,63 +148,7 @@
         <p class="about">In the role of Chief UX/UI Designer, Jordan Williams leads the charge in crafting exceptional user experiences and intuitive interfaces at HireMe Corporation. Responsible for the visual and interactive aspects of the company's products, Jordan oversees the UX and UI design teams, ensuring a seamless and delightful user journey.As a valued member of the management team, Jordan actively contributes to the determination of HireMe Corporation's strategic direction and growth. With a focus on human-centric design, Jordan plays a pivotal role in elevating HireMe Corporation's digital presence and ensuring that user satisfaction remains at the forefront of the company's goals.</p>
     </div>
 </div>
-<!-- <div class="card">
-    <div class="squarebox"></div>
-    <div class="roundbox"></div>
-    <div class="img_box"><img src="person4.jpg"></div>
-    
 
-<div class="user_content">
-    <h5 class="name">Olivia Martinez</h5>
-    <p class="post">Network Engineer</p>
-    <div class="star">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star-half-stroke"></i>
-        <i class="fa-solid fa-star transparent"></i>
-    </div>
-    <p class="about">In the role of Network Engineer, Olivia Martinez spearheads the design, implementation, and maintenance of HireMe Corporation's network infrastructure. With a focus on optimizing network performance, reliability, and security, Olivia leads a team of skilled engineers in ensuring seamless connectivity. As a pivotal member of the management team, she actively contributes to strategic planning and growth initiatives, playing a crucial role in the development and maintenance of HireMe Corporation's robust and secure network architecture. Olivia's expertise ensures the company's networks remain efficient and resilient in an ever-evolving technological landscape.</p>
-</div>
-</div>
-<div class="card">
-    <div class="squarebox"></div>
-    <div class="roundbox"></div>
-    <div class="img_box"><img src="person8.jpg"></div>
-    
-
-<div class="user_content">
-    <h5 class="name">Ethan Reynolds</h5>
-    <p class="post">Software Architect</p>
-    <div class="star">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star transparent"></i>
-    </div>
-    <p class="about">As the Software Architect, Ethan Reynolds is at the forefront of HireMe Corporation's software design and development initiatives. Responsible for shaping the overall architecture and technical direction, Ethan leads a team of skilled engineers to create scalable and innovative software solutions. His role extends to overseeing software development processes, ensuring code quality, and driving technology innovation within the organization. A key influencer in the company's management team, Ethan actively contributes to strategic decisions and growth initiatives, cementing HireMe Corporation's position as a leader in cutting-edge software development.</p>
-</div>
-</div> -->
-<!-- <div class="card">
-    <div class="squarebox"></div>
-    <div class="roundbox"></div>
-    <div class="img_box"><img src="person9.png"></div>
-    
-
-<div class="user_content">
-    <h5 class="name">Sophia Nguyen</h5>
-    <p class="post">Software Developer</p>
-    <div class="star">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-    </div>
-    <p class="about">In the capacity of Software Developer, Sophia Nguyen takes charge of driving the development efforts at HireMe Corporation. Leading a team of skilled programmers, Sophia oversees the design, implementation, and maintenance of high-quality software solutions. As an influential member of the management team, Sophia actively contributes to shaping the strategic direction and growth initiatives of the company. With a strong focus on technological innovation, Sophia plays a crucial role in positioning HireMe Corporation as a leader in cutting-edge programming and software development.</p>
-    <br>
-</div>
-</div> -->
 
         </div>
     

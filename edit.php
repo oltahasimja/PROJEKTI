@@ -1,8 +1,9 @@
 
 <?php
+session_start();
 include ('PunaRepository.php');
 $id = $_GET['id'];//e merr id e punes prej url
-
+$editedBy = isset($_SESSION['name']) ? "Edited By: " . $_SESSION['name'] : "Edited By: Unknown";
 $jbrep = new PunaRepository();
 $puna = $jbrep->getJobById($id);
 ?>
@@ -46,8 +47,7 @@ $puna = $jbrep->getJobById($id);
 
     <form action="<?php echo $_SERVER['PHP_SELF'] . '?id=' . $id; ?>" method="POST">
      <!-- nese nuk duam t'i ndryshojme te gjitha te dhenat, e perdorim kete pjesen tek value qe te na shfaqen vlerat aktuale, ashtu qe atributet qe nuk duam t'i ndryshojme mbesin te njejta pa pasur nevoje t'i shkruajme prape-->
-     <label>Img:</label>
-        <input type="file" name="img"  value="<?php echo $puna['ID']?>"> <br> <br>
+     
      <label>Img:</label>
         <input type="file" name="img"  value="<?php echo $puna['Img']?>"> <br> <br>
      <label>Job Title:</label>
@@ -62,6 +62,8 @@ $puna = $jbrep->getJobById($id);
         <input type="text" name="pozitaTeHapura"  value="<?php echo $puna['PozitaTeHapura']?>"> <br> <br>
         <label>Pershkrimi:</label>
         <input type="text" name="pershkrimi"  value="<?php echo $puna['Pershkrimi']?>"> <br> <br>
+        <input type="hidden" name="modifikoi" value="<?php echo htmlspecialchars($editedBy); ?>">
+
         <input type="submit" name="editBtn" value="Save"> <br> <br>
     </form>
 </body>
@@ -78,9 +80,10 @@ if(isset($_POST['editBtn'])){
     $detajet = $_POST['detajet'];
     $pozitaTeHapura = $_POST['pozitaTeHapura'];
     $pershkrimi = $_POST['pershkrimi'];
+    $modifikoi = $_POST['modifikoi'];
 
-    $jbrep->editJob($id, $img, $jobTitle, $orari, $lokacioni, $detajet, $pozitaTeHapura, $pershkrimi);
-    header("location:dashboard.php");
+    $jbrep->editJob($id, $img, $jobTitle, $orari, $lokacioni, $detajet, $pozitaTeHapura, $pershkrimi,$modifikoi);
+    header("location:jobopenings.php");
     exit();
 }
 ?>

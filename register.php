@@ -1,6 +1,10 @@
 <?php
+
+
+session_start();
 include_once ('Puna.php');
 include_once ('PunaRepository.php');
+$addedBy = isset($_SESSION['name']) ? "Added By: " . $_SESSION['name'] : "Added By: Unknown";
 
 if (isset($_POST['submitbtn'])) {
     $img = $_POST['img'];
@@ -10,7 +14,8 @@ if (isset($_POST['submitbtn'])) {
     $detajet = $_POST['detajet'];
     $pozitaTeHapura = $_POST['pozitaTeHapura'];
     $pershkrimi = $_POST['pershkrimi'];
-    $puna = new Puna($img,$jobTitle, $orari, $lokacioni,$detajet, $pozitaTeHapura,$pershkrimi);
+    $modifikoi = $_POST['modifikoi'];
+    $puna = new Puna($img,$jobTitle, $orari, $lokacioni,$detajet, $pozitaTeHapura,$pershkrimi,$modifikoi);
 
     $punaRepository = new PunaRepository();
     $punaRepository->insertPuna($puna);
@@ -106,6 +111,9 @@ if (isset($_POST['submitbtn'])) {
             <input type="text" name="pozitaTeHapura" required><br>
             <label>Pershkrimi:</label>
             <input type="text" name="pershkrimi" required><br>
+            
+            <input type="hidden" name="modifikoi" value="<?php echo htmlspecialchars($addedBy); ?>">
+
             <input type="submit" name="submitbtn" value="Submit">
         </form>
 
