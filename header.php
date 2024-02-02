@@ -1,7 +1,7 @@
 
     <header>    
         <div class="navigationbar">
-            <img src="logo.png" class="logo">
+            <img src="foto/logo.png" class="logo">
             <ul class="header-ul">
                 <li><a href="cover.php">Home</a></li>
                 <li><a href="aboutus.php">About Us</a></li>
