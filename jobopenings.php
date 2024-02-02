@@ -71,18 +71,7 @@ $puna = $jbrep->getAllJobs();
     <div id="jobDetailsBox<?php echo $job['ID']; ?>" class="job-details-box">
         <?php echo $job['Pershkrimi']; ?>
         <br>
-        <!-- <div id="applyForm">
-            <h3 style="color: white; display: flex; justify-content: center;">Add your CV</h3>
-            <br>
-            <form onsubmit="return validateApplyForm('cv<?php echo $job['ID']; ?>', <?php echo $job['ID']; ?>)">
-                <label for="cv<?php echo $job['ID']; ?>" style="color: white; margin-left: 2.5em;">Upload your CV:   </label>
-                <input type="file" id="cv<?php echo $job['ID']; ?>" name="cv" accept=".pdf, .doc, .docx" style="margin-left: 1em;">
-                <br>
-                <button type="submit" id="butoniApply"><b>Apply</b></button>
-            </form>
-        </div>
-        <a href="#" class="close-btn" onclick="closeJobDetails(<?php echo $job['ID']; ?>)">Close</a>
-    </div> -->
+    
 
    <div id="applyForm">
     <h3 style="color: white; display: flex; justify-content: center;">Add your CV</h3>
@@ -90,7 +79,7 @@ $puna = $jbrep->getAllJobs();
     <form onsubmit="return validateApplyForm('cv<?php echo $job['ID']; ?>', <?php echo $job['ID']; ?>)" enctype="multipart/form-data" method="post">
         <label for="cv<?php echo $job['ID']; ?>" style="color: white; margin-left: 2.5em;">Upload your CV:   </label>
         <input type="file" id="cv<?php echo $job['ID']; ?>" name="cv" accept=".pdf, .doc, .docx" style="margin-left: 1em;">
-        <!-- Hidden input to store the job_id -->
+        <!-- Hidden input -->
         <input type="hidden" id="job_id" name="job_id" value="<?php echo $job['ID']; ?>">
         <br>
         <button type="submit" id="butoniApply"><b>Apply</b></button>
@@ -123,19 +112,18 @@ $puna = $jbrep->getAllJobs();
  
 
     <?php
-    // ... Your existing code ...
- 
+
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"]) && isset($_POST["job_id"])) {
         $jobId = $_POST["job_id"];
         $cvFile = $_FILES["cv"];
     
-        // Validate and move the uploaded CV file
-        $uploadDir = "uploads/"; // Change this to your desired upload directory
+       
+        $uploadDir = "uploads/";
         $cvFileName = $uploadDir . basename($cvFile["name"]);
     
         if (move_uploaded_file($cvFile["tmp_name"], $cvFileName)) {
-            // CV file moved successfully, now insert into the database
-            include_once "ApplicantRepository.php"; // Create this file to handle database operations
+            // insertimi ne databaze
+            include_once "ApplicantRepository.php";
     
             $applicantRepository = new ApplicantRepository();
             $applicantRepository->insertApplicant($jobId, $cvFileName);
@@ -160,17 +148,7 @@ $puna = $jbrep->getAllJobs();
     applyForm.style.display = "block";
 }
 
-// function validateApplyForm(fileInputId, index) {
-//     var cvFile = document.getElementById(fileInputId).files[0];
 
-//     if (!cvFile) {
-//         alert('Please upload your CV!');
-//         return false;
-//     }
-
-//     alert('Application submitted successfully!');
-//     return true;
-// }
 
     function validateApplyForm(fileInputId, jobId) {
         var cvFile = document.getElementById(fileInputId).files[0];
