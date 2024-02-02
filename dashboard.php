@@ -33,6 +33,7 @@ $team = $strep->getAllTeam();
                 <th>Detajet</th>
                 <th>PozitaTeHapura</th>
                 <th>Pershkrimi</th>
+                <th>Modifikoi</th>
             </tr>
             </thead>
             <tbody>
@@ -46,6 +47,7 @@ $team = $strep->getAllTeam();
                         <td><?php echo $job['Detajet'];?></td>
                         <td><?php echo $job['PozitaTeHapura'];?></td>
                         <td><?php echo $job['Pershkrimi'];?></td>
+                        <td><?php echo $job['Modifikoi'];?></td>
                         <td><a href='edit.php?id=<?php echo $job['ID']?>'>Edit</a></td> <!--e dergojme id ne url permes pjeses ?id= dhe permes kodit ne php e marrim nga jobi i cili eshte i paraqitur ne kete rresht-->
                         <td><a href='delete.php?id=<?php echo $job['ID']?>'>Delete</a></td>
                     </tr>
@@ -89,6 +91,7 @@ $team = $strep->getAllTeam();
             <th>JobTitle</th>
             <th>Description</th>
             <th>Img</th>
+            <th>Modifikoi</th>
             </tr>
             </thead>
             <tbody>
@@ -99,6 +102,7 @@ $team = $strep->getAllTeam();
                     <td><?php echo $worker['jobTitle'];?></td>
                     <td><?php echo $worker['description'];?></td>
                     <td><?php echo $worker['Img'];?></td>
+                    <td><?php echo $worker['Modifikoi'];?></td>
                     <td><a href='editTeam.php?id=<?php echo $worker['ID']?>'>Edit</a></td> <!--e dergojme id ne url permes pjeses ?id= dhe permes kodit ne php e marrim nga jobi i cili eshte i paraqitur ne kete rresht-->
                     <td><a href='deleteTeam.php?id=<?php echo $worker['ID']?>'>Delete</a></td>
                     </tr>

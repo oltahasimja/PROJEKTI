@@ -33,9 +33,11 @@
         session_start();
         if (isset($_SESSION['roli'])) {
          if($_SESSION['roli']=="admin"){
-             echo"<button>
-                     <a href='dashboard.php'>Dashboard</a>
-                 </button>";
+             echo"<div class='dashboardbutton' style='display: flex; justify-content: center; align-items: center; width: 100%;'>
+                            <button style='background-color: #023047; width: 10em; height: 3em; border: 1px solid white; border-radius: 1.5em;'>
+                            <a style='color:white; text-decoration: none;' href='dashboard.php'><b>Dashboard</b></a>
+                            </button>
+                    </div>";
          }
         }
  require_once "DatabaseConnection.php";
