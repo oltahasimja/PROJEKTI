@@ -117,8 +117,8 @@ $team = $strep->getAllTeam();
                             <td><?php echo $worker['description'];?></td>
                             <td><?php echo $worker['Img'];?></td>
                             <td><?php echo $worker['Modifikoi'];?></td>
-                            <td><a href='editTeam.php?id=<?php echo $worker['ID']?>'>Edit</a></td> <!--e dergojme id ne url permes pjeses ?id= dhe permes kodit ne php e marrim nga jobi i cili eshte i paraqitur ne kete rresht-->
-                            <td><a href='deleteTeam.php?id=<?php echo $worker['ID']?>'>Delete</a></td>
+                            <td><a href='editTeam.php?id=<?php echo $worker['ID']?>' style='color: green;'>Edit</a></td> <!--e dergojme id ne url permes pjeses ?id= dhe permes kodit ne php e marrim nga jobi i cili eshte i paraqitur ne kete rresht-->
+                            <td><a href='deleteTeam.php?id=<?php echo $worker['ID']?>'style='color: red;'>Delete</a></td>
                             </tr>
                         <?php }?> 
                     </tbody>
