@@ -61,9 +61,10 @@ $team = $strep->getAllTeam();
                 </table>
             </div>
         </div>
-
+        
+        <div class="dashboardresponsive">
             <div class="dashboardtable">
-                <table class="tabela">
+                <table class="tabela2">
                     <thead>
                     <tr>
                     <th>First Name</th>
@@ -89,7 +90,7 @@ $team = $strep->getAllTeam();
                     </tbody>
                 </table>
             </div>
-      
+        </div>
             <button style='background-color: gray; width: 10em; height: 3em; border: 1px solid white; border-radius: 1.5em;'>
                 <a style='color:white; text-decoration: none;' href='register.php'><b>Register</b></a>
             </button>

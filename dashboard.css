@@ -28,26 +28,30 @@ a:hover {
 }
 
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 1200px) {
      table {
         font-size: 12px;  
     }
- /*
-    th, td {
-        padding: 6px; 
-    }
-    .header {
-        font-size: 14px;
-    } */
+
     .dashboardresponsive{
-        width: 96%;
+        width: 100%;
         overflow: scroll;
         margin-left: 0.5em;
     }
 
     .dashboardtable{
-        width: 50em;
+        width: 80em;
     }
 
+    .tabela{
+        width: 100%;
+    }
+
+    .tabela2{
+        width: 100%;
+    }
+
+    
+    
  
 }
