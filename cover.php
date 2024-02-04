@@ -28,46 +28,42 @@
                </div>
               </div>
               <div class="slider-area">
-                <h2>Our Partners</h2>
-                <div class="wrapper">
-                    <div class="item" style="  width: 100px;
-                    height: 100px;"><img alt="" src="foto/K2-logo.png"></div>
-
-                    <div class="item"  style="  width: 50px;
-                    height: 50px; margin-top: 2em;"><img alt="" src="foto/2000px-AEW_Capital_Management_logo.svg-pd8y9l6ubmuqake5njvxfn4mhbwz91hep0fa94d4hs.png"></div>
-                   
-                   <div class="item"  style="  width: 100px;
-                    height: 100px;"><img alt="" src="foto/RPM-pyve0q1lw1h7bu0s8qgbkk9ywhd97qfrebdx1cssn4.png"></div>
-                     
-                       
-                      
-                    <div class="item" style="  width: 500px;
-                    height: 100px;"><img alt="" src="foto/kraft-kennedy.png"></div>
-
-                     <div class="item" style="  width: 100px;
-                    height: 100px;"><img alt="" src="foto/fireman-company-logo-white.webp"></div>
-                   
-                    
-                    <div class="item" style="  width: 100px;
-                    height: 100px;"><img alt="" src="foto/harbor_logo_midnite-blu_rgb2x.png"></div>
-                   
-                  <div class="item" style="  width: 400px;
-                    height: 100px;"><img alt="" src="foto/imanage.png"></div>
-                    
-                    <div class="item" style="  width: 200px;
-                    height: 100px;"><img alt="" src="foto/kraft-kennedy.png"></div>
-                    
-                    <div class="item" style="  width: 100px;
-                    height: 100px;"><img alt="" src="foto/micro-strategies.png"></div>
-                    
-                    <div class="item" style="  width: 100px;
-                    height: 100px;"><img alt="" src="foto/netdocuments.png"></div>
-                </div>
+        <h2>Our Partners</h2>
+        <div class="wrapper" style="display: flex; overflow: hidden; height: 150px;">
+            <div class="item" style="width: 100px; height: 100px; object-fit: contain; overflow: hidden;">
+                <img alt="" src="foto/K2-logo.png" style="width: 100%; height: 100%;">
             </div>
+            <div class="item" style="width: 200px; height: 100px; object-fit: contain; overflow: hidden; ">
+                <img alt="" src="foto/2000px-AEW_Capital_Management_logo.svg-pd8y9l6ubmuqake5njvxfn4mhbwz91hep0fa94d4hs.png" style="width: 100%; height: 100%;">
+            </div>
+            <div class="item" style="width: 100px; height: 100px; object-fit: contain; overflow: hidden;">
+                <img alt="" src="foto/RPM-pyve0q1lw1h7bu0s8qgbkk9ywhd97qfrebdx1cssn4.png" style="width: 100%; height: 100%;">
+            </div>
+            <div class="item" style="width: 500px; height: 100px; object-fit: contain; overflow: hidden;">
+                <img alt="" src="foto/kraft-kennedy.png" style="width: 100%; height: 100%;">
+            </div>
+            <div class="item" style="width: 200px; height: 100px; object-fit: contain; overflow: hidden;">
+                <img alt="" src="foto/fireman-company-logo-white.webp" style="width: 100%; height: 100%;">
+            </div>
+            <div class="item" style="width: 400px; height: 100px; object-fit: contain; overflow: hidden;">
+                <img alt="" src="foto/harbor_logo_midnite-blu_rgb2x.png" style="width: 100%; height: 100%;">
+            </div>
+            <div class="item" style="width: 400px; height: 100px; object-fit: contain; overflow: hidden;">
+                <img alt="" src="foto/imanage.png" style="width: 100%; height: 100%;">
+            </div>
+            <div class="item" style="width: 200px; height: 100px; object-fit: contain; overflow: hidden;">
+                <img alt="" src="foto/kraft-kennedy.png" style="width: 100%; height: 100%;">
+            </div>
+            <div class="item" style="width: 300px; height: 100px; object-fit: contain; overflow: hidden;">
+                <img alt="" src="foto/micro-strategies.png" style="width: 100%; height: 100%;">
+            </div>
+          
+        </div>
+    </div>
         </div>
 
                 <?php include 'footer.php'; ?>
-    <script>
+                  <script>
    var slides = document.querySelectorAll(".slide");
 var dots = document.querySelectorAll(".dot");
 var index = 0;
@@ -111,5 +107,8 @@ function changeSlide(){
 
 }
 </script>
+
+
+
 </body>
 </html>
