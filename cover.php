@@ -62,51 +62,36 @@
     </div>
         </div>
 
-                <?php include 'footer.php'; ?>
-                  <script>
-   var slides = document.querySelectorAll(".slide");
-var dots = document.querySelectorAll(".dot");
-var index = 0;
+        <?php include 'footer.php'; ?>
+        <script>
+            var slides = document.querySelectorAll(".slider-area .wrapper .item");
+            var dots = document.querySelectorAll(".item");
+            var index = 0;
+            var itemsToShow = 3;
+
+            function nextSlide() {
+                index += itemsToShow;
+                if (index >= slides.length) {
+                    index = 0;
+                }
+                changeSlide();
+            }
+
+            function changeSlide() {
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                    dots[i].classList.remove("active");
+                }
+            
+                for (let i = index; i < index + itemsToShow && i < slides.length; i++) {
+                    slides[i].style.display = "block";
+                    dots[i].classList.add("active");
+                }
+            }
 
 
-function prevSlide(n){
-  index+=n;
-  console.log("prevSlide is called");
-  changeSlide();
-}
-
-function nextSlide(n){
-  index+=n;
-  changeSlide();
-}
-
-changeSlide();
-
-function changeSlide(){
-
-  if(index>slides.length-1)
-    index=0;
-
-  if(index<0)
-    index=slides.length-1;
-
-
-
-    for(let i=0;i<slides.length;i++){
-      slides[i].style.display = "none";
-
-      dots[i].classList.remove("active");
-
-
-    }
-
-    slides[index].style.display = "block";
-    dots[index].classList.add("active");
-
-
-
-}
-</script>
+            setInterval(nextSlide, 1000);
+        </script>
 
 
 
