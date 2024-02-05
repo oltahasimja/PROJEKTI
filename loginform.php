@@ -2,7 +2,10 @@
     // include ('validation.php');
 
     session_start();
-
+    if(isset($_SESSION['name'])){
+        header("location:cover.php");
+        die;
+    }
     include("db.php");
 
         if($_SERVER['REQUEST_METHOD'] == "POST"){
